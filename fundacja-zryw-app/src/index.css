@@ -1,3 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Calluna';
+  src: url('/fonts/Calluna-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Order';
+  src: url('/fonts/New-Order-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-new-order: "New Order", sans;
+  --font-callluna: "Calluna", sans-serif;
+  --color-primary: #3D4E54;
+  --color-accent: #CB3014;
+  --color-olive: #C4C495;
+  --width-main: 1320px;
+}

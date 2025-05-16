@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // Import your components
 import Home from "./components/Home";
 import About from "./components/About";
-import NotFound from "./components/NotFound";
 import Apply from "./components/Apply";
+import NotFound from "./components/NotFound";
 
 const App: React.FC = () => {
   return (

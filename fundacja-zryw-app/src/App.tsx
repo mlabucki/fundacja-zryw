@@ -6,10 +6,12 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Apply from "./components/Apply";
 import NotFound from "./components/NotFound";
+import Navigation from "./components/Navigation";
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

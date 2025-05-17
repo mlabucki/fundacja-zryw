@@ -17,6 +17,7 @@
 }
 
 @theme {
+  --breakpoint-xs: 393px;
   --font-new-order: "New Order", sans;
   --font-calluna: "Calluna", sans-serif;
   --color-background: #fffff6;
@@ -24,4 +25,5 @@
   --color-accent: #CB3014;
   --color-olive: #C4C495;
   --width-main: 1320px;
+  --width-mobile: 365px;
 }

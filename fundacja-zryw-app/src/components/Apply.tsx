@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "./Contact";
 
 // Styles internal
 const styles = {
@@ -9,10 +10,10 @@ const styles = {
   },
   typography: {
     heroText:
-      "font-['New_Order'] text-white text-[5.0625rem] md:text-[81px] font-bold leading-[1.1]",
-    heading: "font-['New_Order'] text-4xl font-bold",
-    subheading: "font-['New_Order'] text-2xl font-semibold",
-    paragraph: "font-['Calluna'] text-xl",
+      "font-new-order text-white text-[5.0625rem] md:text-[81px] font-bold leading-[1.1]",
+    heading: "font-new-order text-4xl font-bold",
+    subheading: "font-new-order text-2xl font-semibold",
+    paragraph: "font-calluna text-xl",
   },
   containers: {
     imageContainer: "w-full h-full object-cover rounded-lg",
@@ -30,7 +31,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ children, className = "" }) => (
   <button
-    className={`bg-[var(--color-accent)] text-white font-['New_Order'] text-base px-6 py-2 rounded-full ${className}`}
+    className={`bg-accent text-white font-new-order text-base px-6 py-2 rounded-full ${className}`}
   >
     {children}
   </button>
@@ -59,7 +60,7 @@ const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
 
 const Apply: React.FC = () => {
   return (
-    <div className="w-full bg-[var(--color-background)] text-[var(--color-primary)]">
+    <div className="w-main mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
       {/* Hero Banner */}
       <section className="w-full flex flex-col items-center py-8 px-2">
         {/* mobil */}
@@ -236,23 +237,7 @@ const Apply: React.FC = () => {
       </section>
 
       {/* */}
-      <section className={`${styles.layout.section} pb-32`}>
-        <div className="relative rounded-lg overflow-hidden aspect-[2/1]">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('./photos/apply-to-zryw.jpg')" }}
-          />
-
-          <div className="relative z-10 h-full flex flex-col justify-between p-12 md:p-20">
-            <SectionTitle className="text-white text-center">
-              Aplikuj na zryw
-            </SectionTitle>
-            <div className="flex justify-center">
-              <Button>Aplikuj</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Contact />
     </div>
   );
 };

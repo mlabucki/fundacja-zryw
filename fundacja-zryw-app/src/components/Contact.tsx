@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = ({
   buttonText = "Aplikuj",
   onButtonClick,
 }) => (
-  <div className={"w-full flex flex-col items-center"}>
+  <div className="w-[var(--width-mobile)] md:w-[var(--width-main)] mx-auto flex flex-col items-center">
     <div className={`relative w-full rounded-[2px] overflow-hidden`}>
       <img
         src={src}

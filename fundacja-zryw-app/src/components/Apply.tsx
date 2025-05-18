@@ -1,5 +1,8 @@
 import React from "react";
 import Contact from "./Contact";
+import applyToZryw from "/photos/apply-to-zryw.jpg";
+import SoundsFamiliar from "./SoundsFamiliar";
+import Button from "./Button";
 
 // Styles internal
 const styles = {
@@ -24,19 +27,6 @@ const styles = {
 };
 
 // Reusable components
-interface ButtonProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-const Button: React.FC<ButtonProps> = ({ children, className = "" }) => (
-  <button
-    className={`bg-accent text-white font-new-order text-base px-6 py-2 rounded-full ${className}`}
-  >
-    {children}
-  </button>
-);
-
 interface SectionTitleProps {
   children: React.ReactNode;
   className?: string;
@@ -60,19 +50,19 @@ const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
 
 const Apply: React.FC = () => {
   return (
-    <div className="w-main mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
+    <div className="w-[var(--width-mobile)] md:w-[var(--width-main)] mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
       {/* Hero Banner */}
-      <section className="w-full flex flex-col items-center py-8 px-2">
+      <section className="w-full flex flex-col items-center py-8 ">
         {/* mobil */}
-        <div className="w-full max-w-[var(--width-main)] flex flex-col items-center md:hidden">
-          <div className="w-full rounded-lg overflow-hidden aspect-video mb-6">
+        <div className="w-full flex flex-col items-center md:hidden">
+          <div className="w-full rounded-lg overflow-hidden aspect-[3/4]">
             <img
               src="./photos/apply-create.jpg"
               alt="Aplikuj na zryw"
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="font-['New_Order'] text-[2rem] xs:text-3xl sm:text-4xl font-bold text-center leading-tight mb-6 text-[var(--color-primary)]">
+          <h1 className="font-['New_Order'] text-xl xs:text-2xl sm:text-3xl font-bold text-center  mb-4 text-[var(--color-primary)]">
             Dołącz do
             <br />
             Zrywu i twórz
@@ -109,7 +99,7 @@ const Apply: React.FC = () => {
           <SectionTitle className="text-center mb-12 md:mb-24">
             Dołącz do nas jeśli chcesz
           </SectionTitle>
-          {/* MOBILE: below md */}
+          {/* MOBILE:*/}
           <div className="flex flex-col items-center gap-8 md:hidden">
             {[
               {
@@ -138,7 +128,7 @@ const Apply: React.FC = () => {
               </div>
             ))}
           </div>
-          {/* DESKTOP: from md */}
+          {/* DESKTOP:*/}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-16">
             {[
               {
@@ -171,73 +161,21 @@ const Apply: React.FC = () => {
       </section>
 
       {/* Sounds Familiar Section */}
-      <section className={styles.layout.sectionPadding}>
-        <div className={styles.layout.section}>
-          <SectionTitle className="mb-8 md:mb-16 text-center">
-            Brzmi znajomo?
-          </SectionTitle>
-          {/* MOBILE: below md */}
-          <div className="flex flex-col items-center md:hidden">
-            <div className="w-full max-w-xs rounded-lg overflow-hidden mb-6">
-              <img
-                src="./photos/apply-sounds-familiar.jpg"
-                alt="Grupa ludzi na skałach"
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="flex flex-col items-center gap-4 w-full max-w-xs mb-4">
-              {[
-                "Masz 19–25 lat i studiujesz na polskiej uczelni",
-                "Działasz lokalnie i wiesz, jak rozwiązywać realne problemy",
-                "Chcesz poznać osoby z pierwszej linii polskiego życia publicznego",
-                "Szukasz ekipy z całej Polski, która też chce czegoś więcej",
-                "Frustruje Cię, jak wygląda dziś polskie życie publiczne i czujesz, że można inaczej",
-                "Jesteś osobą empatyczną, zdeterminowaną i skuteczną",
-                "Zależy Ci na bliskim kontakcie z czołowymi liderami publicznymi",
-              ].map((text, index) => (
-                <p
-                  key={index}
-                  className="text-center font-['Calluna'] text-base text-[var(--color-primary)]"
-                >
-                  {text}
-                </p>
-              ))}
-            </div>
-            <Button className="mt-2">Aplikuj</Button>
-          </div>
-          {/* DESKTOP: from md */}
-          <div className="hidden md:grid grid-cols-12 gap-8 md:gap-12">
-            <div className="md:col-span-4 aspect-square md:aspect-[4/5]">
-              <img
-                src="./photos/apply-sounds-familiar.jpg"
-                alt="Grupa ludzi na skałach"
-                className={styles.containers.imageContainer}
-              />
-            </div>
-            <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-16 md:gap-y-8">
-              {[
-                "Masz 19–25 lat i studiujesz na polskiej uczelni",
-                "Działasz lokalnie i wiesz, jak rozwiązywać realne problemy",
-                "Chcesz poznać osoby z pierwszej linii polskiego życia publicznego",
-                "Szukasz ekipy z całej Polski, która też chce czegoś więcej",
-                "Frustruje Cię, jak wygląda dziś polskie życie publiczne i czujesz, że można inaczej",
-                "Jesteś osobą empatyczną, zdeterminowaną i skuteczną",
-                "Zależy Ci na bliskim kontakcie z czołowymi liderami publicznymi",
-              ].map((text, index) => (
-                <p key={index} className={styles.typography.paragraph}>
-                  {text}
-                </p>
-              ))}
-              <div>
-                <Button>Aplikuj</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SoundsFamiliar />
 
       {/* */}
-      <Contact />
+      <section className="w-full grid grid-cols-10">
+        <div className="hidden md:block md:col-span-1" />
+        <div className="col-span-8">
+          <Contact
+            src={applyToZryw}
+            text="Aplikuj na zryw"
+            buttonText="Aplikuj"
+            aspect="aspect-[4/1]"
+          />
+        </div>
+        <div className="hidden md:block md:col-span-1" />
+      </section>
     </div>
   );
 };

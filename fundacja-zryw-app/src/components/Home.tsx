@@ -1,7 +1,10 @@
 import React from "react";
+import LoadingHeader from "./LandingHeader";
 
 const Home: React.FC = () => {
-  return <h2 className="font-new-order bg-accent w-main text-white">zryw</h2>;
+  return (
+    <LoadingHeader />
+  );
 };
 
 export default Home;

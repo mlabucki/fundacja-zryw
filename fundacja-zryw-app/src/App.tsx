@@ -7,18 +7,24 @@ import About from "./components/About";
 import Apply from "./components/Apply";
 import NotFound from "./components/NotFound";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <div className="min-h-screen flex flex-col">
+      <Router>
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/apply" element={<Apply />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+       <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+       </main>
+       <Footer />
+      </Router>
+    </div>
   );
 };
 

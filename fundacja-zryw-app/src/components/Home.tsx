@@ -15,6 +15,7 @@ const Home: React.FC = () => {
       <Description />
       <Partners />
       <SoundsFamiliar />
+      <hr className="w-mobile xs:w-main mx-auto mt-38 xs:mt-40 h-[1px] bg-olive border-0 outline-none" />
       <Newsletter />
     </>
   );

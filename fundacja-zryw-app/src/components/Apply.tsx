@@ -7,9 +7,9 @@ import Button from "./Button";
 // Styles internal
 const styles = {
   layout: {
-    section: "container mx-auto px-4",
-    sectionPadding: "py-20",
-    sectionLargePadding: "py-32",
+    section: "container mx-[10px] md:mx-auto px-4",
+    sectionPadding: "pt-20",
+    sectionLargePadding: "pt-32",
   },
   typography: {
     heroText:
@@ -52,8 +52,8 @@ const Apply: React.FC = () => {
   return (
     <div className="w-[var(--width-mobile)] md:w-[var(--width-main)] mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
       {/* Hero Banner */}
-      <section className="w-full flex flex-col items-center py-8 ">
-        {/* mobil */}
+      <section className="w-full flex flex-col items-center ">
+        {/* mobile */}
         <div className="w-full flex flex-col items-center md:hidden">
           <div className="w-full rounded-lg overflow-hidden aspect-[3/4]">
             <img
@@ -77,16 +77,20 @@ const Apply: React.FC = () => {
           style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
         >
           <div
-            className={`${styles.layout.section} h-full flex flex-col justify-between py-20 relative z-10`}
+            className={`${styles.layout.section} h-full flex flex-col justify-between py-6 relative z-10`}
           >
             <div className="flex flex-col items-start max-w-xl">
-              <HeroText>Aplikuj na zryw</HeroText>
+              <HeroText className="text-[4rem]">Aplikuj na zryw</HeroText>
             </div>
             <div className="flex flex-col items-end gap-4">
-              <HeroText>Twórz nową</HeroText>
-              <div className="flex items-center gap-8">
-                <HeroText>Polskę</HeroText>
-                <Button>Aplikuj</Button>
+              <div className="flex flex-col items-start gap-4">
+                <HeroText className="text-[4rem] mr-4">Twórz nową</HeroText>
+                <div className="flex flex-row items-center justify-between w-full">
+                  <HeroText className="text-[4rem]">Polskę</HeroText>
+                  <Button className="bg-white !text-[var(--color-primary)]">
+                    Aplikuj
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -95,7 +99,7 @@ const Apply: React.FC = () => {
 
       {/* Dołacz*/}
       <section className={styles.layout.sectionLargePadding}>
-        <div className={styles.layout.section}>
+        <div>
           <SectionTitle className="text-center mb-12 md:mb-24">
             Dołącz do nas jeśli chcesz
           </SectionTitle>
@@ -164,7 +168,7 @@ const Apply: React.FC = () => {
       <SoundsFamiliar />
 
       {/* */}
-      <section className="w-full grid grid-cols-10">
+      <section className="w-full grid grid-cols-10 mt-[120px]">
         <div className="hidden md:block md:col-span-1" />
         <div className="col-span-8">
           <Contact
@@ -172,6 +176,7 @@ const Apply: React.FC = () => {
             text="Aplikuj na zryw"
             buttonText="Aplikuj"
             aspect="aspect-[4/1]"
+            className="w-full h-full mx-0"
           />
         </div>
         <div className="hidden md:block md:col-span-1" />

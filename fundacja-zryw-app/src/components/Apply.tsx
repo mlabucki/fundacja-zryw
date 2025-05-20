@@ -62,7 +62,7 @@ const Apply: React.FC = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="font-['New_Order'] text-xl xs:text-2xl sm:text-3xl font-bold text-center  mt-10 text-[var(--color-primary)]">
+          <h1 className="font-new-order text-xl xs:text-2xl sm:text-3xl font-bold text-center  mb-4 text-[var(--color-primary)]">
             Dołącz do
             <br />
             Zrywu i twórz

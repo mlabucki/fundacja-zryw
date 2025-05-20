@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ children, className = "" }) => (
   <button
-    className={`bg-accent text-white font-new-order text-base px-6 py-2 rounded-full ${className}`}
+    className={`bg-accent text-white font-calluna text-xl rounded-full flex justify-center items-center ${className}`}
   >
     {children}
   </button>

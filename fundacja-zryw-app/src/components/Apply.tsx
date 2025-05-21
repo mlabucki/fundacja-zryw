@@ -7,13 +7,13 @@ import Button from "./Button";
 // Styles internal
 const styles = {
   layout: {
-    section: "container mx-[10px] md:mx-auto px-4",
+    section: "container mx-[10px] xs:mx-auto px-4",
     sectionPadding: "pt-20",
     sectionLargePadding: "pt-32",
   },
   typography: {
     heroText:
-      "font-new-order text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[81px] font-bold leading-[1.1]",
+      "font-new-order text-white text-4xl xs:text-5xl font-bold leading-[1.1]",
     heading: "font-new-order text-4xl font-bold",
     subheading: "font-new-order text-2xl font-semibold",
     paragraph: "font-calluna text-xl",
@@ -21,8 +21,8 @@ const styles = {
   containers: {
     imageContainer: "w-full h-full object-cover rounded-lg",
     gridTwoColumns:
-      "grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-16 md:gap-y-8",
-    gridThreeColumns: "grid grid-cols-1 md:grid-cols-3 gap-16",
+      "grid grid-cols-1 xs:grid-cols-2 gap-6 xs:gap-x-16 xs:gap-y-8",
+    gridThreeColumns: "grid grid-cols-1 xs:grid-cols-3 gap-16",
   },
 };
 
@@ -50,28 +50,32 @@ const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
 
 const Apply: React.FC = () => {
   return (
-    <div className="w-[var(--width-mobile)] md:w-[var(--width-main)] mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
+    <div className="w-mobile xs:w-main mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
       {/* Hero Banner */}
       <section className="w-full flex flex-col items-center ">
-        {/* MOBILE: tylko poniżej 394px */}
-        <div className="w-full flex flex-col items-center xs:hidden">
-          <div className="w-full rounded-lg overflow-hidden aspect-[3/4]">
+        {/* MOBILE: */}
+        <div className="w-full overflow-hidden xs:hidden">
+          <picture>
+            <source
+              srcSet="./photos/apply-create.jpg"
+              media="(min-width: 500px)"
+            />
             <img
               src="./photos/apply-create.jpg"
               alt="Aplikuj na zryw"
               className="w-full h-full object-cover"
             />
-          </div>
-          <h1 className="font-new-order text-xl font-bold text-center mb-4 text-[var(--color-primary)]">
+          </picture>
+          <h1 className="font-new-order text-3xl font-bold text-center mt-6 mb-4 text-[var(--color-primary)]">
             Dołącz do
             <br />
             Zrywu i twórz
             <br />
             nową Polskę
           </h1>
-          <Button className="mt-2">Aplikuj</Button>
+          <Button className="block mx-auto mb-6">Aplikuj</Button>
         </div>
-        {/* DESKTOP: od 394px wzwyż */}
+
         <div
           className="hidden xs:block w-full h-[600px] mb-8 bg-cover bg-center relative"
           style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
@@ -91,9 +95,8 @@ const Apply: React.FC = () => {
               width: "100%",
             }}
           >
-            {/* Lewy górny róg */}
             <div
-              className="flex flex-col items-start justify-start p-2 md:p-4 lg:p-6 max-w-[420px] gap-2"
+              className="flex flex-col items-start justify-start p-2 xs:p-4 max-w-[420px] gap-2"
               style={{ gridArea: "left" }}
             >
               <HeroText className="text-[4rem] leading-tight">
@@ -104,7 +107,7 @@ const Apply: React.FC = () => {
             </div>
 
             <div
-              className="flex flex-col items-end justify-end p-2 md:p-4 lg:p-6 max-w-[520px] gap-2"
+              className="flex flex-col items-end justify-end p-2 xs:p-4 max-w-[520px] gap-2"
               style={{ gridArea: "right" }}
             >
               <div className="flex flex-col items-end">
@@ -195,10 +198,8 @@ const Apply: React.FC = () => {
       {/* Sounds Familiar Section */}
       <SoundsFamiliar />
 
-      {/* */}
       <section className="w-full grid grid-cols-10 mt-[120px]">
-        <div className="hidden md:block md:col-span-1" />
-        <div className="col-span-8">
+        <div className="col-span-10 xs:col-span-8">
           <Contact
             src={applyToZryw}
             text="Aplikuj na zryw"
@@ -207,8 +208,9 @@ const Apply: React.FC = () => {
             className="w-full h-full mx-0"
           />
         </div>
-        <div className="hidden md:block md:col-span-1" />
+        <div className="hidden xs:block xs:col-span-1" />
       </section>
+      <div className="mb-16 xs:mb-32" />
     </div>
   );
 };

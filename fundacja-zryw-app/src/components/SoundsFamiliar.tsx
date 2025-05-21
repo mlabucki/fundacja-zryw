@@ -3,11 +3,11 @@ import Button from "./Button";
 
 const SoundsFamiliar: React.FC = () => (
   <div className="mt-20">
-    <h2 className="font-new-order text-4xl font-bold mb-8 md:mb-16 text-center md:text-left">
+    <h2 className="font-new-order text-4xl font-bold mb-8 text-center xs:text-left xs:mb-16">
       Brzmi znajomo?
     </h2>
-    {/* MOBILE: below md */}
-    <div className="flex flex-col items-center md:hidden">
+    {/* MOBILE: tylko poniżej xs */}
+    <div className="flex flex-col items-center xs:hidden">
       <div className="w-full max-w-xs rounded-lg overflow-hidden aspect-[109/100] mb-6">
         <img
           src="./photos/apply-sounds-familiar.jpg"
@@ -33,18 +33,20 @@ const SoundsFamiliar: React.FC = () => (
           </p>
         ))}
       </div>
-      <Button className="mt-2">Aplikuj</Button>
+      <Button className="mt-2 bg-[var(--color-accent)] text-white">
+        Aplikuj
+      </Button>
     </div>
-    {/* DESKTOP: from md */}
-    <div className="hidden md:grid grid-cols-12 gap-8 md:gap-12">
-      <div className="md:col-span-4 aspect-square md:aspect-[4/5]">
+    {/* DESKTOP: od xs wzwyż */}
+    <div className="hidden xs:grid grid-cols-12 gap-8 xs:gap-12">
+      <div className="xs:col-span-4 aspect-square xs:aspect-[4/5]">
         <img
           src="./photos/apply-sounds-familiar.jpg"
           alt="Grupa ludzi na skałach"
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
-      <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-16 md:gap-y-8">
+      <div className="xs:col-span-8 grid grid-cols-1 xs:grid-cols-2 gap-6 xs:gap-x-16 xs:gap-y-8">
         {[
           "Masz 19–25 lat i studiujesz na polskiej uczelni",
           "Działasz lokalnie i wiesz, jak rozwiązywać realne problemy",
@@ -59,7 +61,9 @@ const SoundsFamiliar: React.FC = () => (
           </p>
         ))}
         <div>
-          <Button>Aplikuj</Button>
+          <Button className="bg-[var(--color-accent)] text-white">
+            Aplikuj
+          </Button>
         </div>
       </div>
     </div>

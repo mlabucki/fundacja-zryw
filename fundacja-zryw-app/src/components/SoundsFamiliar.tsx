@@ -33,7 +33,9 @@ const SoundsFamiliar: React.FC = () => (
           </p>
         ))}
       </div>
-      <Button className="mt-2">Aplikuj</Button>
+      <Button className="mt-2 bg-[var(--color-accent)] text-white">
+        Aplikuj
+      </Button>
     </div>
     {/* DESKTOP: od xs wzwyż */}
     <div className="hidden xs:grid grid-cols-12 gap-8 xs:gap-12">
@@ -59,7 +61,9 @@ const SoundsFamiliar: React.FC = () => (
           </p>
         ))}
         <div>
-          <Button>Aplikuj</Button>
+          <Button className="bg-[var(--color-accent)] text-white">
+            Aplikuj
+          </Button>
         </div>
       </div>
     </div>

@@ -58,7 +58,7 @@ const Apply: React.FC = () => {
           <picture>
             <source
               srcSet="./photos/apply-create.jpg"
-              media="(min-width: 500px)"
+              media="(min-width: 395px)"
             />
             <img
               src="./photos/apply-create.jpg"
@@ -73,7 +73,9 @@ const Apply: React.FC = () => {
             <br />
             nową Polskę
           </h1>
-          <Button className="block mx-auto mb-6">Aplikuj</Button>
+          <Button className="block mx-auto mb-6 bg-[var(--color-accent)] text-white">
+            Aplikuj
+          </Button>
         </div>
 
         <div
@@ -199,6 +201,7 @@ const Apply: React.FC = () => {
       <SoundsFamiliar />
 
       <section className="w-full grid grid-cols-10 mt-[120px]">
+        <div className="hidden xs:block xs:col-span-1" />
         <div className="col-span-10 xs:col-span-8">
           <Contact
             src={applyToZryw}

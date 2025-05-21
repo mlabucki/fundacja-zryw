@@ -114,8 +114,8 @@ const Apply: React.FC = () => {
                 <HeroText className="text-[4rem] text-right leading-tight m-0">
                   Twórz nową
                 </HeroText>
-                <div className="flex flex-row items-end gap-2">
-                  <HeroText className="text-[4rem] text-right leading-tight m-0">
+                <div className="flex flex-row items-end w-full">
+                  <HeroText className="text-[4rem] text-left leading-tight m-0 w-full">
                     Polskę
                   </HeroText>
                   <Button className="bg-white !text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto">

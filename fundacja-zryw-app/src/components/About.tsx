@@ -39,7 +39,7 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
 
 const About: React.FC = () => {
   return (
-    <div className="w-mobile xs:w-main mx-auto mt-12 mb-20">
+    <div className="w-mobile xs:w-main mx-4 xs:mx-auto mt-12 mb-20">
       {/* Sekcja 1*/}
       <section className="flex flex-col xs:flex-row gap-8 mb-12">
         <div className="flex flex-col items-start flex-1 h-auto xs:h-[220px]">

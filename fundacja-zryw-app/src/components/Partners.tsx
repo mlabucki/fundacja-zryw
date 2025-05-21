@@ -17,7 +17,7 @@ const Partners: React.FC = () => {
         <section className="w-mobile xs:w-main mx-auto h-[128px] xs:h-[190px] mt-9 overflow-hidden xs:mt-25">
             <div className="inline-flex gap-x-6">
                 {partners.map(({ img }, i) => (
-                    <div className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
+                    <div key={img + `${i}`} className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
                         <img key={i} src={img} alt={`partner-${i}`} className=""/>
                     </div>
                 ))}

@@ -13,7 +13,7 @@ const styles = {
   },
   typography: {
     heroText:
-      "font-new-order text-white text-[5.0625rem] md:text-[81px] font-bold leading-[1.1]",
+      "font-new-order text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[81px] font-bold leading-[1.1]",
     heading: "font-new-order text-4xl font-bold",
     subheading: "font-new-order text-2xl font-semibold",
     paragraph: "font-calluna text-xl",
@@ -53,8 +53,8 @@ const Apply: React.FC = () => {
     <div className="w-[var(--width-mobile)] md:w-[var(--width-main)] mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
       {/* Hero Banner */}
       <section className="w-full flex flex-col items-center ">
-        {/* mobile */}
-        <div className="w-full flex flex-col items-center md:hidden">
+        {/* MOBILE: tylko poniżej 394px */}
+        <div className="w-full flex flex-col items-center xs:hidden">
           <div className="w-full rounded-lg overflow-hidden aspect-[3/4]">
             <img
               src="./photos/apply-create.jpg"
@@ -62,7 +62,7 @@ const Apply: React.FC = () => {
               className="w-full h-full object-cover"
             />
           </div>
-          <h1 className="font-new-order text-xl xs:text-2xl sm:text-3xl font-bold text-center  mb-4 text-[var(--color-primary)]">
+          <h1 className="font-new-order text-xl font-bold text-center mb-4 text-[var(--color-primary)]">
             Dołącz do
             <br />
             Zrywu i twórz
@@ -71,23 +71,51 @@ const Apply: React.FC = () => {
           </h1>
           <Button className="mt-2">Aplikuj</Button>
         </div>
-        {/* DESKTOP: from md (width-main) */}
+        {/* DESKTOP: od 394px wzwyż */}
         <div
-          className="hidden md:block w-full h-[600px] mb-8 bg-cover bg-center relative"
+          className="hidden xs:block w-full h-[600px] mb-8 bg-cover bg-center relative"
           style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
         >
           <div
-            className={`${styles.layout.section} h-full flex flex-col justify-between py-6 relative z-10`}
+            className="h-full w-full grid"
+            style={{
+              gridTemplateRows: "1fr 1fr 1fr 1fr",
+              gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+              gridTemplateAreas: `
+                "left left . . . ."
+                "left left . . . ."
+                ". . . . right right"
+                ". . . . right right"
+              `,
+              height: "100%",
+              width: "100%",
+            }}
           >
-            <div className="flex flex-col items-start max-w-xl">
-              <HeroText className="text-[4rem]">Aplikuj na zryw</HeroText>
+            {/* Lewy górny róg */}
+            <div
+              className="flex flex-col items-start justify-start p-2 md:p-4 lg:p-6 max-w-[420px] gap-2"
+              style={{ gridArea: "left" }}
+            >
+              <HeroText className="text-[4rem] leading-tight">
+                Aplikuj na
+                <br />
+                zryw
+              </HeroText>
             </div>
-            <div className="flex flex-col items-end gap-4">
-              <div className="flex flex-col items-start gap-4">
-                <HeroText className="text-[4rem] mr-4">Twórz nową</HeroText>
-                <div className="flex flex-row items-center justify-between w-full">
-                  <HeroText className="text-[4rem]">Polskę</HeroText>
-                  <Button className="bg-white !text-[var(--color-primary)]">
+
+            <div
+              className="flex flex-col items-end justify-end p-2 md:p-4 lg:p-6 max-w-[520px] gap-2"
+              style={{ gridArea: "right" }}
+            >
+              <div className="flex flex-col items-end">
+                <HeroText className="text-[4rem] text-right leading-tight m-0">
+                  Twórz nową
+                </HeroText>
+                <div className="flex flex-row items-end gap-2">
+                  <HeroText className="text-[4rem] text-right leading-tight m-0">
+                    Polskę
+                  </HeroText>
+                  <Button className="bg-white !text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto">
                     Aplikuj
                   </Button>
                 </div>
@@ -100,11 +128,11 @@ const Apply: React.FC = () => {
       {/* Dołacz*/}
       <section className={styles.layout.sectionLargePadding}>
         <div>
-          <SectionTitle className="text-center mb-12 md:mb-24">
+          <SectionTitle className="text-center mb-12 xs:mb-24">
             Dołącz do nas jeśli chcesz
           </SectionTitle>
           {/* MOBILE:*/}
-          <div className="flex flex-col items-center gap-8 md:hidden">
+          <div className="flex flex-col items-center gap-8 xs:hidden">
             {[
               {
                 title: "Poznać politykę od kuchni",
@@ -133,7 +161,7 @@ const Apply: React.FC = () => {
             ))}
           </div>
           {/* DESKTOP:*/}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="hidden xs:grid grid-cols-1 xs:grid-cols-3 gap-16">
             {[
               {
                 title: "Poznać politykę od kuchni",

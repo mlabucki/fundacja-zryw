@@ -5,7 +5,7 @@ import Description from "./Description";
 import Partners from "./Partners";
 import SoundsFamiliar from "./SoundsFamiliar";
 import Newsletter from "./Newsletter";
-import Gallery from "./gallery";
+import Gallery from "./Gallery";
 
 const Home: React.FC = () => {
   return (

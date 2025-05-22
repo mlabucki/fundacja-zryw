@@ -32,5 +32,8 @@
     "tailwindcss": "^4.0.9",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

@@ -11,17 +11,20 @@ import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <Router>
-      <Navigation />
-       <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/apply" element={<Apply />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-       </main>
+        <div className="sticky top-0 z-10 bg-background">
+          <Navigation />
+        </div>
+
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/apply" element={<Apply />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
        <Footer />
       </Router>
     </div>

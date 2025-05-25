@@ -1,4 +1,6 @@
 import React from "react";
+import Container from "./Container";
+import "./partners.scss";
 
 const partners: { img: string }[] = [
   { img: "/partners/action.png" },
@@ -13,19 +15,37 @@ const partners: { img: string }[] = [
 const Partners: React.FC = () => {
   return (
     <>
-        <h2 className="font-new-order w-mobile mx-auto xs:w-main text-green text-4xl tracking-[-0.03em] mt-20">Zaufali <br className="xs:hidden"/> nam</h2>
-        <section className="w-mobile xs:w-main mx-auto h-[128px] xs:h-[190px] mt-9 overflow-hidden xs:mt-25">
-            <div className="inline-flex gap-x-6">
-                {partners.map(({ img }, i) => (
-                    <div key={img + `${i}`} className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
-                        <img key={i} src={img} alt={`partner-${i}`} className=""/>
-                    </div>
-                ))}
+      <Container>
+        <h2 className="font-new-order text-green text-4xl tracking-[-0.03em] mt-20">Zaufali <br className="xs:hidden" /> nam</h2>
+      </Container>
+      <section className="h-[128px] xs:h-[190px] mt-9 overflow-hidden xs:mt-25 flex mx-auto">
+        <div className="inline-flex gap-x-6 justify-center logos-slide px-3">
+          {partners.map(({ img }, i) => (
+            <div key={img + `${i} 1`} className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
+              <img key={i} src={img} alt={`partner-${i}`} className="" />
             </div>
-        </section>
-        <div className="w-mobile mx-auto flex xs:w-main mt-6 xs:mt-3">
-            <p className="ml-auto text-xs xs:text-base font-calluna">Zostań partnerem</p>
+          ))}
         </div>
+        <div className="inline-flex gap-x-6 justify-center logos-slide px-3">
+          {partners.map(({ img }, i) => (
+            <div key={img + `${i} 1`} className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
+              <img key={i} src={img} alt={`partner-${i}`} className="" />
+            </div>
+          ))}
+        </div>
+        <div className="inline-flex gap-x-6 justify-center logos-slide px-3">
+          {partners.map(({ img }, i) => (
+            <div key={img + `${i} 1`} className="w-[133px] xs:w-[199px] h-[128px] xs:h-[190px] bg-beige border-1 border-beige-b flex justify-center items-center rounded-lg p-3">
+              <img key={i} src={img} alt={`partner-${i}`} className="" />
+            </div>
+          ))}
+        </div>
+      </section>
+      <Container>
+        <div className="flex mt-6 xs:mt-3">
+          <p className="ml-auto text-xs xs:text-base font-calluna">Zostań partnerem</p>
+        </div>
+      </Container>
     </>
   );
 };

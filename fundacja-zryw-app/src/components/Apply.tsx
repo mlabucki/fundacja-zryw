@@ -3,6 +3,8 @@ import Contact from "./Contact";
 import applyToZryw from "/photos/apply-to-zryw.jpg";
 import SoundsFamiliar from "./SoundsFamiliar";
 import Button from "./Button";
+import Faq from "./Faq";
+import Container from "./Container";
 
 // Styles internal
 const styles = {
@@ -50,155 +52,162 @@ const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
 
 const Apply: React.FC = () => {
   return (
-    <div className="w-mobile xs:w-main mx-auto bg-[var(--color-background)] text-[var(--color-primary)]">
+    <div className="text-[var(--color-primary)]">
       {/* Hero Banner */}
-      <section className="w-full flex flex-col items-center ">
-        {/* MOBILE: */}
-        <div className="w-full overflow-hidden xs:hidden">
-          <picture>
-            <source
-              srcSet="./photos/apply-create.jpg"
-              media="(min-width: 395px)"
-            />
-            <img
-              src="./photos/apply-create.jpg"
-              alt="Aplikuj na zryw"
-              className="w-full h-full object-cover"
-            />
-          </picture>
-          <h1 className="font-new-order text-3xl font-bold text-center mt-6 mb-4 text-[var(--color-primary)]">
-            Dołącz do
-            <br />
-            Zrywu i twórz
-            <br />
-            nową Polskę
-          </h1>
-          <Button className="block mx-auto mb-6 bg-[var(--color-accent)] text-white">
-            Aplikuj
-          </Button>
-        </div>
+      <Container>
+        <section className="w-full flex flex-col items-center ">
+          {/* MOBILE: */}
+          <div className="w-full overflow-hidden xs:hidden">
+            <picture>
+              <source
+                srcSet="./photos/apply-create.jpg"
+                media="(min-width: 395px)"
+              />
+              <img
+                src="./photos/apply-create.jpg"
+                alt="Aplikuj na zryw"
+                className="w-full h-full object-cover"
+              />
+            </picture>
+            <h1 className="font-new-order text-3xl font-bold text-center mt-6 mb-4 text-[var(--color-primary)]">
+              Dołącz do
+              <br />
+              Zrywu i twórz
+              <br />
+              nową Polskę
+            </h1>
+            <Button className="block mx-auto mb-6 bg-[var(--color-accent)] text-white">
+              Aplikuj
+            </Button>
+          </div>
 
-        <div
-          className="hidden xs:block w-full h-[600px] mb-8 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
-        >
           <div
-            className="h-full w-full grid"
-            style={{
-              gridTemplateRows: "1fr 1fr 1fr 1fr",
-              gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
-              gridTemplateAreas: `
-                "left left . . . ."
-                "left left . . . ."
-                ". . . . right right"
-                ". . . . right right"
-              `,
-              height: "100%",
-              width: "100%",
-            }}
+            className="hidden xs:block w-full h-[600px] mb-8 bg-cover bg-center relative"
+            style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
           >
             <div
-              className="flex flex-col items-start justify-start p-2 xs:p-4 max-w-[420px] gap-2"
-              style={{ gridArea: "left" }}
+              className="h-full w-full grid"
+              style={{
+                gridTemplateRows: "1fr 1fr 1fr 1fr",
+                gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
+                gridTemplateAreas: `
+                  "left left . . . ."
+                  "left left . . . ."
+                  ". . . . right right"
+                  ". . . . right right"
+                `,
+                height: "100%",
+                width: "100%",
+              }}
             >
-              <HeroText className="text-[4rem] leading-tight">
-                Aplikuj na
-                <br />
-                zryw
-              </HeroText>
-            </div>
-
-            <div
-              className="flex flex-col items-end justify-end p-2 xs:p-4 max-w-[520px] gap-2"
-              style={{ gridArea: "right" }}
-            >
-              <div className="flex flex-col items-end">
-                <HeroText className="text-[4rem] text-right leading-tight m-0">
-                  Twórz nową
+              <div
+                className="flex flex-col items-start justify-start p-2 xs:p-4 max-w-[420px] gap-2"
+                style={{ gridArea: "left" }}
+              >
+                <HeroText className="text-[4rem] leading-tight">
+                  Aplikuj na
+                  <br />
+                  zryw
                 </HeroText>
-                <div className="flex flex-row items-end w-full">
-                  <HeroText className="text-[4rem] text-left leading-tight m-0 w-full">
-                    Polskę
+              </div>
+
+              <div
+                className="flex flex-col items-end justify-end p-2 xs:p-4 max-w-[520px] gap-2"
+                style={{ gridArea: "right" }}
+              >
+                <div className="flex flex-col items-end">
+                  <HeroText className="text-[4rem] text-right leading-tight m-0">
+                    Twórz nową
                   </HeroText>
-                  <Button className="bg-white !text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto">
-                    Aplikuj
-                  </Button>
+                  <div className="flex flex-row items-end w-full">
+                    <HeroText className="text-[4rem] text-left leading-tight m-0 w-full">
+                      Polskę
+                    </HeroText>
+                    <Button className="bg-white !text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto">
+                      Aplikuj
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Container>
 
       {/* Dołacz*/}
-      <section className={styles.layout.sectionLargePadding}>
-        <div>
-          <SectionTitle className="text-center mb-12 xs:mb-24">
-            Dołącz do nas jeśli chcesz
-          </SectionTitle>
-          {/* MOBILE:*/}
-          <div className="flex flex-col items-center gap-8 xs:hidden">
-            {[
-              {
-                title: "Poznać politykę od kuchni",
-                description:
-                  "Zobacz jak to jest pracować w polityce i zdobądź cenne doświadczenie",
-              },
-              {
-                title: "Mieć wsparcie osób z doświadczeniem",
-                description:
-                  "Nasi mentorzy pomogą Ci rozwinąć skrzydła i zdobyć nowe umiejętności",
-              },
-              {
-                title: "Dołączyć do społeczności pełnej pasji",
-                description:
-                  "Poznaj ludzi, którzy tak jak Ty chcą zmieniać Polskę na lepsze",
-              },
-            ].map((item, index) => (
-              <div key={index} className="w-full max-w-xs text-center">
-                <h3 className={`${styles.typography.subheading} mb-4`}>
-                  {item.title}
-                </h3>
-                <p className={`${styles.typography.paragraph} opacity-80`}>
-                  {item.description}
-                </p>
-              </div>
-            ))}
+      <Container>
+        <section className={styles.layout.sectionLargePadding}>
+          <div>
+            <SectionTitle className="text-center mb-12 xs:mb-24">
+              Dołącz do nas jeśli chcesz
+            </SectionTitle>
+            {/* MOBILE:*/}
+            <div className="flex flex-col items-center gap-8 xs:hidden">
+              {[
+                {
+                  title: "Poznać politykę od kuchni",
+                  description:
+                    "Zobacz jak to jest pracować w polityce i zdobądź cenne doświadczenie",
+                },
+                {
+                  title: "Mieć wsparcie osób z doświadczeniem",
+                  description:
+                    "Nasi mentorzy pomogą Ci rozwinąć skrzydła i zdobyć nowe umiejętności",
+                },
+                {
+                  title: "Dołączyć do społeczności pełnej pasji",
+                  description:
+                    "Poznaj ludzi, którzy tak jak Ty chcą zmieniać Polskę na lepsze",
+                },
+              ].map((item, index) => (
+                <div key={index} className="w-full max-w-xs text-center">
+                  <h3 className={`${styles.typography.subheading} mb-4`}>
+                    {item.title}
+                  </h3>
+                  <p className={`${styles.typography.paragraph} opacity-80`}>
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* DESKTOP:*/}
+            <div className="hidden xs:grid grid-cols-1 xs:grid-cols-3 gap-16">
+              {[
+                {
+                  title: "Poznać politykę od kuchni",
+                  description:
+                    "Zobacz jak to jest pracować w polityce i zdobądź cenne doświadczenie",
+                },
+                {
+                  title: "Mieć wsparcie osób z doświadczeniem",
+                  description:
+                    "Nasi mentorzy pomogą Ci rozwinąć skrzydła i zdobyć nowe umiejętności",
+                },
+                {
+                  title: "Dołączyć do społeczności pełnej pasji",
+                  description:
+                    "Poznaj ludzi, którzy tak jak Ty chcą zmieniać Polskę na lepsze",
+                },
+              ].map((item, index) => (
+                <div key={index}>
+                  <h3 className={`${styles.typography.subheading} mb-4`}>
+                    {item.title}
+                  </h3>
+                  <p className={`${styles.typography.paragraph} opacity-80`}>
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-          {/* DESKTOP:*/}
-          <div className="hidden xs:grid grid-cols-1 xs:grid-cols-3 gap-16">
-            {[
-              {
-                title: "Poznać politykę od kuchni",
-                description:
-                  "Zobacz jak to jest pracować w polityce i zdobądź cenne doświadczenie",
-              },
-              {
-                title: "Mieć wsparcie osób z doświadczeniem",
-                description:
-                  "Nasi mentorzy pomogą Ci rozwinąć skrzydła i zdobyć nowe umiejętności",
-              },
-              {
-                title: "Dołączyć do społeczności pełnej pasji",
-                description:
-                  "Poznaj ludzi, którzy tak jak Ty chcą zmieniać Polskę na lepsze",
-              },
-            ].map((item, index) => (
-              <div key={index}>
-                <h3 className={`${styles.typography.subheading} mb-4`}>
-                  {item.title}
-                </h3>
-                <p className={`${styles.typography.paragraph} opacity-80`}>
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      </Container>
+      
 
       {/* Sounds Familiar Section */}
       <SoundsFamiliar />
+
+      <Faq />
 
       <section className="w-full grid grid-cols-10 mt-[120px]">
         <div className="hidden xs:block xs:col-span-1" />

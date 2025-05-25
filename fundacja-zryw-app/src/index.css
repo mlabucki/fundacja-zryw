@@ -32,3 +32,12 @@
   --height-footer: 569px;
   --height-footer-mobile: 753px;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

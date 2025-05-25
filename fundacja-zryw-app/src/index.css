@@ -17,7 +17,7 @@
 }
 
 @theme {
-  --breakpoint-xs: 394px;
+  --breakpoint-xs: 440px;
   --font-new-order: "New Order", sans;
   --font-calluna: "Calluna", sans-serif;
   --color-background: #fffff6;
@@ -30,5 +30,5 @@
   --width-main: 1320px;
   --width-mobile: 365px;
   --height-footer: 569px;
-  --height-footer-mobile: 803px;
+  --height-footer-mobile: 753px;
 }

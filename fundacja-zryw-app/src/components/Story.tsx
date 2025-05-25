@@ -1,6 +1,7 @@
 import React from "react";
 import photo1 from '/photos/talking.jpg';
 import photo2 from '/photos/apply-sounds-familiar.jpg';
+import Container from "./Container";
 
 interface CardData {
   img: string;
@@ -23,17 +24,20 @@ const cards: CardData[] = [
 
 const Story: React.FC = () => {
   return (
-    <section className="w-mobile xs:w-main mx-auto mt-20 xs:mt-5 flex justify-between flex-col xs:flex-row">
-        <h2 className="w-[364px] text-2xl xs:text-4xl font-new-order leading-[130%] xs:leading-[110%] xs:tracking-[-0.015em] text-green">
-            Budujemy środowisko, które pozwala studentom stawiać pierwsze kroki w służbie publicznej.
-        </h2>
-        {cards.map(({ img, alt, text }, idx) => (
-          <div key={idx} className="flex flex-col xs:w-[330px] mt-10 xs:mt-0">
-            <img src={img} alt={alt} className="rounded-lg object-cover h-[252px] object-[50%_23%]"/>
-            <p className="font-calluna text-lg mt-6 leading-[130%] tracking-[-0.015em]">{text}</p>
-          </div>
-        ))}
-    </section>
+    <Container>
+      <section className="mt-20 xs:mt-5 flex justify-between flex-col xs:flex-row xs:gap-x-4 xs:flex-wrap">
+          <h2 className="xs:w-[364px] text-2xl xs:text-4xl font-new-order leading-[130%] xs:leading-[110%] xs:tracking-[-0.015em] text-green xs:pb-10 whitespace-normal">
+              Budujemy środowisko, które pozwala studentom stawiać pierwsze kroki w służbie publicznej.
+          </h2>
+          {cards.map(({ img, alt, text }, idx) => (
+            <div key={idx} className="flex flex-col xs:flex-1 xs:min-w-[200px] xs:max-w-[330px] mt-10 xs:mt-0">
+              <img src={img} alt={alt} className="rounded-lg object-cover h-[252px] object-[50%_23%]"/>
+              <p className="font-calluna text-lg mt-6 leading-[130%] tracking-[-0.015em]">{text}</p>
+            </div>
+          ))}
+      </section>
+    </Container>
+    
   );
 };
 

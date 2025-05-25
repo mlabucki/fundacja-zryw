@@ -10,35 +10,22 @@ const gallery: { img: string }[] = [
 ];
 
 const Gallery: React.FC = () => {
-  // Grupowanie zdjęć po 3
-  const rows = [];
-  for (let i = 0; i < gallery.length; i += 3) {
-    rows.push(gallery.slice(i, i + 3));
-  }
-
   return (
-    <section className="w-mobile mx-auto xs:w-main space-y-3.5 overflow-hidden mt-25">
-      {rows.map((row, rowIndex) => (
-        <div
-          key={`${rowIndex} + ${row}`}
-          className={`flex gap-3.5 overflow-visible ${
-            rowIndex === 0
-              ? "translate-x-[-13%]"
-              : rowIndex === 1
-              ? "translate-x-[-10%]"
-              : ""
-          }`}
-        >
-          {row.map((item, i) => (
+    <section className="mt-25 w-full max-w-[1440px] mx-auto overflow-hidden">
+      <div className="grid grid-cols-2 xs:grid-cols-3 gap-1 xs:gap-1.5 md:gap-3">
+        {gallery.map((picture) => (
+          <div
+            key={picture.img}
+            className="rounded-lg overflow-hidden h-[clamp(157px,25vw,383px)] overflow-hidden w-full"
+          >
             <img
-              key={i}
-              src={item.img}
+              src={picture.img}
               alt=""
-              className="h-[383px] w-auto object-cover"
+              className="w-full h-full object-cover"
             />
-          ))}
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

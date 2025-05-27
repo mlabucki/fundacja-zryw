@@ -89,8 +89,8 @@ const About: React.FC = () => {
           </picture>
         </section>
         {/* Sekcja 3*/}
-        <section className="flex flex-col xs:flex-row gap-8 mt-10">
-          <div className="flex flex-col items-start flex-1 h-[220px]">
+        <section className="flex flex-col gap-5 mt-5 xs:grid xs:grid-cols-3 xs:grid-rows-1 xs:min-h-[420px]">
+          <div className="flex flex-col flex-1 self-start items-start min-h-[220px]">
             <AboutWhy
               title="Dlaczego"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
@@ -98,7 +98,7 @@ const About: React.FC = () => {
               textColor="text-white"
             />
           </div>
-          <div className="flex flex-col items-center flex-1 xs:mt-8 h-[220px]">
+          <div className="flex flex-col flex-1 self-center items-center min-h-[220px]">
             <AboutWhy
               title="Jak"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
@@ -106,7 +106,7 @@ const About: React.FC = () => {
               textColor="text-white"
             />
           </div>
-          <div className="flex flex-col items-end flex-1 xs:mt-16 h-[220px]">
+          <div className="flex flex-col flex-1 self-end items-end min-h-[220px]">
             <AboutWhy
               title="Co"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."

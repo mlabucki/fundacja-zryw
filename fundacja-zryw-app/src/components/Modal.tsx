@@ -43,10 +43,10 @@ const Modal: React.FC<props> = ({handleNavClick, close}) => {
                 <NavLink to='/' aria-label="Go to home" onClick={handleNavClick('/')}>
                     <p className="text-white font-calluna text-3xl">Strona główna</p>
                 </NavLink>
-                <NavLink to='/about' aria-label="Go to home" onClick={handleNavClick('/about')}>
+                <NavLink to='/o-nas' aria-label="Go to home" onClick={handleNavClick('/o-nas')}>
                     <p className="text-white font-calluna text-3xl">O nas</p>
                 </NavLink>
-                <NavLink to='/apply' aria-label="Go to home" onClick={handleNavClick('/apply')}>
+                <NavLink to='/aplikuj' aria-label="Go to home" onClick={handleNavClick('/aplikuj')}>
                     <Button className="bg-accent">
                         Aplikuj
                     </Button>

@@ -31,11 +31,11 @@ const Navigation: React.FC = () => {
         </NavLink>
         
         <div className='hidden xs:flex justify-between items-center'>
-          <NavLink to='/about' className='mr-12'>
+          <NavLink to='/o-nas' className='mr-12'>
             <p className='font-calluna text-xl text-black'>O nas</p>
           </NavLink>
 
-          <NavLink to='/apply' className='w-24 h-11 bg-green rounded-full flex justify-center items-center'>
+          <NavLink to='/aplikuj' className='w-24 h-11 bg-green rounded-full flex justify-center items-center'>
             <p className='font-calluna text-xl text-white'>Aplikuj</p>
           </NavLink>
         </div>

@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
 import logo from "/logo/logo-outline.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import Container from "./Container";
 
 const Footer: React.FC = () => {
     const [isWide, setIsWide] = useState(window.innerWidth >= 768);
+      const location = useLocation();
+
+    const handleNavClick = (path: string) => (e: React.MouseEvent) => {
+        if (location.pathname === path) {
+            e.preventDefault();
+        } else {
+            window.scrollTo(0, 0);
+        }
+    };
 
     useEffect(() => {
         const handleResize = () => setIsWide(window.innerWidth >= 768);
@@ -27,13 +36,13 @@ const Footer: React.FC = () => {
             <section className="w-full flex xs:flex-row flex-col justify-between mt-7 xs:mt-12">
             <div className="w-auto">
                 <div className="flex justify-between flex-wrap xs:grid xs:grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-x-8 gap-y-4 xs:gap-x-40 xs:gap-y-12">
-                    <NavLink to='/' className=''>
+                    <NavLink to='/' onClick={handleNavClick('/')}>
                         <p className='font-calluna text-xl text-white whitespace-nowrap'>Strona główna</p>
                     </NavLink>
-                    <NavLink to='/about'>
+                    <NavLink to='/o-nas' onClick={handleNavClick('/o-nas')}>
                         <p className='font-calluna text-xl text-white whitespace-nowrap'>O nas</p>
                     </NavLink>
-                    <NavLink to='/apply'>
+                    <NavLink to='/aplikuj' onClick={handleNavClick('/aplikuj')}>
                         <p className='font-calluna text-xl text-white whitespace-nowrap'>Aplikuj</p>
                     </NavLink>
                 </div>

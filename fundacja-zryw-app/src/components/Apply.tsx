@@ -202,9 +202,7 @@ const Apply: React.FC = () => {
           </div>
         </section>
       </Container>
-      
 
-      {/* Sounds Familiar Section */}
       <SoundsFamiliar />
 
       <Faq />
@@ -222,7 +220,7 @@ const Apply: React.FC = () => {
         </div>
         <div className="hidden xs:block xs:col-span-1" />
       </section>
-      <div className="mb-16 xs:mb-32" />
+      <div />
     </div>
   );
 };

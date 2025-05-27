@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Container>
         <hr className="mt-20 h-[1px] bg-olive border-0 outline-none hidden xs:block" />
       </Container>
-      
+
       <Story />
       <Description />
       <Partners />
@@ -29,7 +29,13 @@ const Home: React.FC = () => {
       <Newsletter />
       <Gallery />
       <Faq />
-      <Contact text="Zrywamy ze schematami" src={building} className="mt-48"/>
+      <section className="w-full grid grid-cols-10 mt-[120px]">
+        <div className="hidden xs:block xs:col-span-1" />
+        <div className="col-span-10 xs:col-span-8">
+          <Contact text="Zrywamy ze schematami" src={building} />
+        </div>
+        <div className="hidden xs:block xs:col-span-1" />
+      </section>
     </>
   );
 };

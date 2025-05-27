@@ -39,7 +39,7 @@ const Modal: React.FC<props> = ({handleNavClick, close}) => {
                     <img src={closeIcon} alt="burger-icon" />
                 </button>
             </nav>
-            <div className="flex flex-col flex-grow-1 max-h-[250px] justify-between items-center mt-8 pb-10">
+            <div className="flex flex-col flex-grow-1 max-h-[250px] justify-between gap-6 items-center mt-8 pb-10">
                 <NavLink to='/' aria-label="Go to home" onClick={handleNavClick('/')}>
                     <p className="text-white font-calluna text-3xl">Strona główna</p>
                 </NavLink>

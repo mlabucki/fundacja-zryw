@@ -5,6 +5,7 @@ import Newsletter from "./Newsletter";
 import photoApply from "/photos/apply-create.jpg";
 import Container from "./Container";
 import Crew from "./Crew";
+import arrowDown from "/vectors/arrowDown.svg";
 
 interface AboutInfoProps {
   color: string;
@@ -38,9 +39,26 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
   textColor,
 }) => (
   <div
-    className={`flex-1 flex flex-col items-center rounded-t-lg relative  ${bgColor} ${textColor}`}
+    className={`flex-1 flex flex-col items-center rounded-t-lg relative ${bgColor} ${textColor}`}
   >
-    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-4 bg-[var(--color-background)] rounded-b-full z-10" />
+    <div
+      className="absolute top-0 right-1/6 z-10 flex items-center justify-center bg-[var(--color-background)] rounded-full w-[32px] h-[33px] shadow"
+      style={{ transform: "translateY(-25%)" }}
+    >
+      <svg
+        width="8"
+        height="15"
+        viewBox="0 0 13 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={`w-2 h-4 ${bgColor.replace("bg-", "text-")}`}
+      >
+        <path
+          d="M5.05 0.5V14.875H0.25L6.322 23.5L12.25 14.875H7.45V0.5H5.05Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
     <h3 className="font-new-order text-2xl font-bold pt-6">{title}</h3>
     <p className="font-calluna text-base px-6 py-4 text-center">{text}</p>
   </div>

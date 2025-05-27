@@ -8,8 +8,8 @@ const SoundsFamiliar: React.FC = () => (
       <h2 className="font-new-order text-4xl text-green font-bold mb-8 text-center xs:text-left xs:mb-16">
         Brzmi znajomo?
       </h2>
-      {/* MOBILE: tylko poniżej xs */}
-      <div className="flex flex-col items-center xs:hidden">
+      {/* MOBILE + TABLET: do 970px */}
+      <div className="flex flex-col items-center md:hidden">
         <div className="w-full max-w-xs rounded-lg overflow-hidden aspect-[109/100] mb-6">
           <img
             src="./photos/apply-sounds-familiar.jpg"
@@ -39,8 +39,8 @@ const SoundsFamiliar: React.FC = () => (
           Aplikuj
         </Button>
       </div>
-      {/* DESKTOP: od xs wzwyż */}
-      <div className="hidden xs:grid grid-cols-12 gap-8 xs:gap-12">
+      {/* DESKTOP: od 970px wzwyż */}
+      <div className="hidden md:grid grid-cols-12 gap-8 xs:gap-12">
         <div className="xs:col-span-4 aspect-square xs:aspect-[4/5]">
           <img
             src="./photos/apply-sounds-familiar.jpg"
@@ -71,7 +71,6 @@ const SoundsFamiliar: React.FC = () => (
       </div>
     </div>
   </Container>
-  
 );
 
 export default SoundsFamiliar;

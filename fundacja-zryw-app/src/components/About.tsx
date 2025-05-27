@@ -5,7 +5,6 @@ import Newsletter from "./Newsletter";
 import photoApply from "/photos/apply-create.jpg";
 import Container from "./Container";
 import Crew from "./Crew";
-import arrowDown from "/vectors/arrowDown.svg";
 
 interface AboutInfoProps {
   color: string;
@@ -51,7 +50,7 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
         viewBox="0 0 13 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`w-2 h-4 ${bgColor.replace("bg-", "text-")}`}
+        className={`w-[17px] h-[33px] ${bgColor.replace("bg-", "text-")}`}
       >
         <path
           d="M5.05 0.5V14.875H0.25L6.322 23.5L12.25 14.875H7.45V0.5H5.05Z"

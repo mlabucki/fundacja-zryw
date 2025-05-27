@@ -82,9 +82,9 @@ const About: React.FC = () => {
               media="(min-width: 600px)"
             />
             <img
-              src="/photos/team.jpg"
+              src="/photos/apply-sounds-familiar.jpg"
               alt="team"
-              className="w-full h-auto rounded-lg object-cover"
+              className="w-full h-1779px rounded-lg object-cover"
             />
           </picture>
         </section>

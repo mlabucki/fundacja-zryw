@@ -7,9 +7,9 @@ interface AboutInfoProps {
 }
 
 const AboutInfo: React.FC<AboutInfoProps> = ({ color, title, text }) => (
-  <div className="flex-1 flex flex-col items-start h-[330px] w-full max-w-[358px] mx-auto">
+  <div className="flex-1 flex flex-col items-start h-[330px] w-full">
     <h2
-      className={`font-face font-bold lg:mt-[40px] ${color} text-[143px]`}
+      className={`font-face font-bold mt-[40px] ${color} text-[143px]`}
       style={{ fontWeight: 700 }}
     >
       {title}

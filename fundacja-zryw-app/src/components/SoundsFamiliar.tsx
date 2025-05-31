@@ -5,7 +5,7 @@ import Container from "./Container";
 const SoundsFamiliar: React.FC = () => (
   <Container>
     <div className="mt-33">
-      <h2 className="font-new-order text-4xl text-green font-bold mb-8 text-center xs:text-left xs:mb-16">
+      <h2 className="font-new-order text-[41px] xs:text-[54px] text-green font-bold mb-8 text-center xs:text-left xs:mb-16">
         Brzmi znajomo?
       </h2>
       {/* MOBILE + TABLET: do 970px */}

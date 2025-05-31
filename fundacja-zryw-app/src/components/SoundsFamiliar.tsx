@@ -10,7 +10,7 @@ const SoundsFamiliar: React.FC = () => (
       </h2>
       {/* MOBILE + TABLET: do 970px */}
       <div className="flex flex-col items-center md:hidden">
-        <div className="w-full max-w-xs rounded-lg overflow-hidden aspect-[109/100] mb-6">
+        <div className="w-full max-w-xs rounded-lg overflow-hidden aspect-square mb-6">
           <img
             src="./photos/apply-sounds-familiar.jpg"
             alt="Grupa ludzi na skałach"
@@ -41,7 +41,7 @@ const SoundsFamiliar: React.FC = () => (
       </div>
       {/* DESKTOP: od 970px wzwyż */}
       <div className="hidden md:grid grid-cols-12 gap-8 xs:gap-12">
-        <div className="xs:col-span-4 aspect-square xs:aspect-[4/5]">
+        <div className="xs:col-span-4 aspect-square">
           <img
             src="./photos/apply-sounds-familiar.jpg"
             alt="Grupa ludzi na skałach"

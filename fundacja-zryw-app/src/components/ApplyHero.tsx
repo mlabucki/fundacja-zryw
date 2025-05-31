@@ -8,9 +8,7 @@ interface HeroTextProps {
 }
 
 const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
-  <h2
-    className={`font-new-order text-4xl xs:text-5xl font-bold leading-[1.1] ${className}`}
-  >
+  <h2 className={`font-new-order font-bold leading-[1.1] ${className}`}>
     {children}
   </h2>
 );
@@ -18,7 +16,7 @@ const HeroText: React.FC<HeroTextProps> = ({ children, className = "" }) => (
 const ApplyHero: React.FC = () => {
   return (
     <Container>
-      <section className="w-full flex flex-col items-center">
+      <section className="relative xs:mt-8 overflow-hidden rounded-lg w-full">
         {/* MOBILE: */}
         <div className="w-full overflow-hidden xs:hidden h-[360px]">
           <picture>
@@ -29,7 +27,7 @@ const ApplyHero: React.FC = () => {
             <img
               src="./photos/apply-create.jpg"
               alt="Aplikuj na zryw"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg shadow-lg"
             />
           </picture>
           <h1 className="font-new-order text-[54px] font-bold text-center mt-6 mb-4 text-[var(--color-primary)]">
@@ -44,12 +42,17 @@ const ApplyHero: React.FC = () => {
           </Button>
         </div>
 
-        <div
-          className="hidden xs:block w-full h-[600px] mb-8 bg-cover bg-center relative"
-          style={{ backgroundImage: "url('./photos/apply-create.jpg')" }}
-        >
+        {/* DESKTOP: */}
+        <div className="hidden xs:block h-[672px] relative w-full">
+          <img
+            src="./photos/apply-create.jpg"
+            alt="Aplikuj na zryw"
+            className="h-full w-full object-cover object-[40%_35%] rounded-lg shadow-lg"
+          />
+          {/* Gradient overlay identyczny jak w LandingHeader */}
+          <div className="absolute z-2 inset-0 bg-[linear-gradient(285.13deg,_rgba(0,_0,_0,_0)_0.22%,_rgba(81,_81,_61,_0.2)_100%)] rounded-lg"></div>
           <div
-            className="h-full w-full grid"
+            className="h-full w-full grid absolute top-0 left-0 z-3 p-[40px]"
             style={{
               gridTemplateRows: "1fr 1fr 1fr 1fr",
               gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
@@ -79,16 +82,16 @@ const ApplyHero: React.FC = () => {
               style={{ gridArea: "right" }}
             >
               <div className="flex flex-col items-end">
-                <HeroText className="text-[81px] text-right leading-tight m-0 text-[var(--color-beige)]">
+                <HeroText className="text-[81px] text-right leading-tight m-0 text-[var(--color-beige)] whitespace-nowrap">
                   Twórz nową
                 </HeroText>
-                <div className="flex flex-row items-end w-full">
-                  <HeroText className="text-[4rem] text-left leading-tight m-0 w-full text-[var(--color-beige)]">
+                <div className="flex flex-row items-end w-full gap-2">
+                  <HeroText className="text-[81px] text-left leading-tight m-0 w-full text-[var(--color-beige)]">
                     Polskę
                   </HeroText>
                   <Button
                     style={{ backgroundColor: "var(--color-beige)" }}
-                    className="!text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto"
+                    className="!text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto mb-0 self-center"
                   >
                     Aplikuj
                   </Button>

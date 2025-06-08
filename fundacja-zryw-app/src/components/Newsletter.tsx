@@ -8,9 +8,9 @@ const Newsletter: React.FC = () => {
     <Container>
         <section className="mt-10 xs:mt-20">
             <div className="flex flex-col xs:flex-row justify-between flex-wrap gap-x-4">
-                <h3 className="font-new-order text-5xl text-green xs:pb-10">Bądź na bieżąco <br/> Subskrybuj</h3>
+                <h3 className="font-new-order text-[54px] xs:leading-[1.2] text-green xs:pb-10">Bądź na bieżąco <br/> Subskrybuj</h3>
                 <div className="xs:w-[513px] mt-10 xs:mt-0">
-                    <p className="font-calluna text-lg leading-[150%]">Piszesz się na okazjonalne wiadomości od nas? Informacje o najnowszych projektach i zaproszenia na zamknięte wydarzenia?</p>
+                    <p className="font-calluna text-lg leading-[1.5]">Piszesz się na okazjonalne wiadomości od nas? Informacje o najnowszych projektach i zaproszenia na zamknięte wydarzenia?</p>
                         <form onSubmit={(e) => e.preventDefault()} className="flex flex-col xs:flex-row gap-6 justify-between mt-10 h-[120px] xs:h-[48px]">
                             <input
                                 type="email"

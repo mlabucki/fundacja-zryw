@@ -27,7 +27,7 @@ const LoadingHeader: React.FC = () => {
           <div className="absolute hidden xs:block z-2 inset-0 bg-[linear-gradient(285.13deg,_rgba(0,_0,_0,_0)_0.22%,_rgba(81,_81,_61,_0.2)_100%)] rounded-lg"></div>
         </div>
 
-        <h1 className="z-3 xs:absolute xs:top-[6%] xs:left-[3%] text-green mt-6 xs:mt-0 xs:text-white text-[clamp(4rem,6vw,6rem)] font-new-order leading-[0.95] tracking-[-0.03em] xs:capitalize">
+        <h1 className="z-3 xs:absolute xs:top-[6%] xs:left-[3%] text-green mt-6 xs:mt-0 xs:text-white text-[41px] xs:text-[clamp(4rem,6vw,6rem)] font-new-order leading-[0.95] tracking-[-0.03em] xs:capitalize">
           Budujemy <br className="hidden md:block" /> nowe <br className="hidden md:block"/> kadry
         </h1>
 

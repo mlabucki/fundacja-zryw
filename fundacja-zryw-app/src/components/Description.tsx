@@ -120,7 +120,7 @@ const Description: React.FC = () => {
             </p>
           </div>
         ))}
-        <Button className="w-[96px] h-[45px] bg-olive hidden xs:block">Aplikuj</Button>
+        <Button className="w-[96px] h-[45px] bg-olive hidden xs:block" link="/aplikuj">Aplikuj</Button>
       </section>
 
       <div className="mt-10 xs:hidden">
@@ -132,7 +132,7 @@ const Description: React.FC = () => {
             <img src={arrowRight} alt="right" className="rotate-180" />
           </button>
         </div>
-        <Button className="w-[96px] h-[45px] bg-olive ml-auto mt-6">Aplikuj</Button>
+        <Button className="w-[96px] h-[45px] bg-olive ml-auto mt-6" link="/aplikuj">Aplikuj</Button>
       </div>
     </Container>
   );

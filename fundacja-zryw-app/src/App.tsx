@@ -8,11 +8,13 @@ import Apply from "./components/Apply";
 import NotFound from "./components/NotFound";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Router>
+        <ScrollToTop />
         <div className="sticky top-0 z-11 bg-background">
           <Navigation />
         </div>

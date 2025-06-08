@@ -26,7 +26,7 @@ const Story: React.FC = () => {
   return (
     <Container>
       <section className="mt-20 xs:mt-5 flex justify-between flex-col xs:flex-row xs:gap-x-4 xs:flex-wrap">
-          <h2 className="xs:w-[364px] text-2xl xs:text-4xl font-new-order leading-[130%] xs:leading-[110%] xs:tracking-[-0.015em] text-green xs:pb-10 whitespace-normal">
+          <h2 className="xs:w-[364px] text-2xl xs:text-[32px] font-new-order leading-[130%] xs:leading-[110%] xs:tracking-[-0.015em] text-green xs:pb-10 whitespace-normal">
               Budujemy środowisko, które pozwala studentom stawiać pierwsze kroki w służbie publicznej.
           </h2>
           {cards.map(({ img, alt, text }, idx) => (

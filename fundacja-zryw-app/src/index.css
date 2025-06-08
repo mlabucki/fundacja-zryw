@@ -16,10 +16,18 @@
   font-display: swap;
 }
 
+@layer base {
+  body {
+    color: #212121;
+  }
+}
+
+
 @theme {
   --breakpoint-xs: 440px;
   --font-new-order: "New Order", sans;
   --font-calluna: "Calluna", sans-serif;
+  --color-brown: #32211C;
   --color-background: #fffff6;
   --color-primary: #3D4E54;
   --color-accent: #CB3014;

@@ -18,8 +18,8 @@ const ApplyHero: React.FC = () => {
     <Container>
       <section className="relative xs:mt-8 overflow-hidden rounded-lg w-full">
         {/* MOBILE: */}
-        <div className="w-full overflow-hidden xs:hidden h-[360px]">
-          <picture>
+        <div className="block overflow-hidden xs:hidden">
+          <picture className="h-[445px]">
             <source
               srcSet="./photos/apply-create.jpg"
               media="(min-width: 395px)"
@@ -30,14 +30,14 @@ const ApplyHero: React.FC = () => {
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />
           </picture>
-          <h1 className="font-new-order text-[54px] font-bold text-center mt-6 mb-4 text-[var(--color-primary)]">
+          <h1 className="font-new-order text-[54px] font-bold text-center mt-6 mb-4 text-[var(--color-primary)] leading-[1]">
             Dołącz do
             <br />
             Zrywu i twórz
             <br />
             nową Polskę
           </h1>
-          <Button className="block mx-auto mb-6 bg-[var(--color-accent)] text-white">
+          <Button className="mx-auto block mb-6 bg-[var(--color-accent)] text-white w-[96px] h-[39px]" link="/aplikuj">
             Aplikuj
           </Button>
         </div>
@@ -70,7 +70,7 @@ const ApplyHero: React.FC = () => {
               className="flex flex-col items-start justify-start p-2 xs:p-4 max-w-[420px] gap-2"
               style={{ gridArea: "left" }}
             >
-              <HeroText className="text-[81px] leading-tight text-[var(--color-beige)]">
+              <HeroText className="xs:text-[clamp(4rem,6vw,6rem)] whitespace-nowrap leading-tight text-[var(--color-beige)]">
                 Aplikuj na
                 <br />
                 zryw
@@ -82,16 +82,17 @@ const ApplyHero: React.FC = () => {
               style={{ gridArea: "right" }}
             >
               <div className="flex flex-col items-end">
-                <HeroText className="text-[81px] text-right leading-tight m-0 text-[var(--color-beige)] whitespace-nowrap">
+                <HeroText className="xs:text-[clamp(3rem,6vw,6rem)] text-right leading-tight m-0 text-[var(--color-beige)] whitespace-nowrap">
                   Twórz nową
                 </HeroText>
                 <div className="flex flex-row items-end w-full gap-2">
-                  <HeroText className="text-[81px] text-left leading-tight m-0 w-full text-[var(--color-beige)]">
+                  <HeroText className="xs:text-[clamp(3rem,6vw,6rem)] text-left leading-tight m-0 text-[var(--color-beige)]">
                     Polskę
                   </HeroText>
                   <Button
                     style={{ backgroundColor: "var(--color-beige)" }}
-                    className="!text-[var(--color-primary)] ml-2 px-4 py-1 text-base h-auto mb-0 self-center"
+                    className="!text-[var(--color-primary)] text-base self-center w-[96px] h-[39px] ml-auto"
+                    link="/aplikuj"
                   >
                     Aplikuj
                   </Button>

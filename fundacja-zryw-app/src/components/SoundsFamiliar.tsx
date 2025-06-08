@@ -35,7 +35,7 @@ const SoundsFamiliar: React.FC = () => (
             </p>
           ))}
         </div>
-        <Button className="mt-2 bg-[var(--color-accent)] text-white">
+        <Button className="w-[96px] h-[45px] mt-2 bg-[var(--color-accent)] text-white" link="/aplikuj">
           Aplikuj
         </Button>
       </div>
@@ -63,7 +63,7 @@ const SoundsFamiliar: React.FC = () => (
             </p>
           ))}
           <div>
-            <Button className="bg-[var(--color-accent)] text-white">
+            <Button className="w-[96px] h-[45px] bg-[var(--color-accent)] text-white" link="/aplikuj">
               Aplikuj
             </Button>
           </div>

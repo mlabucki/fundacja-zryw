@@ -89,10 +89,10 @@ const Crew: React.FC = () => {
                 {person.name}
               </p>
               {person.title && (
-                <p className="font-calluna text-base">{person.title}</p>
+                <p className="font-calluna text-base text-brown">{person.title}</p>
               )}
             </div>
-            <p className="font-calluna text-base leading-[150%]">
+            <p className="font-calluna text-base text-brown leading-[150%]">
               {person.description}
             </p>
             <div className="flex gap-x-4">

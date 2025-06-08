@@ -1,6 +1,5 @@
 import React from "react";
 import AboutWhy from "./AboutWhy";
-import { clipPathValue } from "./clipPathValue";
 
 const AboutSection3: React.FC = () => {
   return (
@@ -11,27 +10,24 @@ const AboutSection3: React.FC = () => {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
           bgColor="bg-[var(--color-primary)]"
           textColor="text-[var(--color-beige)]"
-          clipPath={clipPathValue}
           arrowColor="var(--color-primary)"
         />
       </div>
-      <div className="mx-auto mt-[60px]">
+      <div className="mt-[80px] flex justify-center">
         <AboutWhy
           title="Jak"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
           bgColor="bg-[var(--color-accent)]"
           textColor="text-[var(--color-beige)]"
-          clipPath={clipPathValue}
           arrowColor="var(--color-accent)"
         />
       </div>
-      <div className="ml-auto mt-[100px]">
+      <div className="mt-[80px] flex ml-auto">
         <AboutWhy
           title="Co"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
           bgColor="bg-[var(--color-olive)]"
           textColor="text-[var(--color-primary)]"
-          clipPath={clipPathValue}
           arrowColor="var(--color-olive)"
         />
       </div>

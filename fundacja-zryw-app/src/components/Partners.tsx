@@ -16,7 +16,7 @@ const Partners: React.FC = () => {
   return (
     <>
       <Container>
-        <h2 className="font-new-order text-green text-4xl tracking-[-0.03em] mt-20">Zaufali <br className="xs:hidden" /> nam</h2>
+        <h2 className="font-new-order text-green text-[54px] tracking-[-0.03em] mt-20">Zaufali <br className="xs:hidden" /> nam</h2>
       </Container>
       <section className="h-[128px] xs:h-[190px] mt-9 overflow-hidden xs:mt-25 flex mx-auto">
         <div className="inline-flex gap-x-6 justify-center logos-slide px-3">

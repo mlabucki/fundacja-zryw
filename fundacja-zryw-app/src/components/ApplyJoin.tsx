@@ -55,9 +55,9 @@ const ApplyJoin: React.FC = () => {
             ))}
           </div>
           {/* DESKTOP:*/}
-          <div className="hidden xs:grid grid-cols-1 xs:grid-cols-3 gap-16">
+          <div className="hidden xs:flex gap-16 flex-wrap justify-between">
             {joinItems.map((item, index) => (
-              <div key={index}>
+              <div key={index} className="max-w-[282px]">
                 <h3 className="font-new-order text-2xl font-semibold mb-4">
                   {item.title}
                 </h3>

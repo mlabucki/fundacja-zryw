@@ -4,18 +4,16 @@ import Button from "./Button";
 interface ContactProps {
   text: string;
   src?: string;
-  buttonText?: string;
-  onButtonClick?: () => void;
   className?: string;
   aspect?: string;
+  target?: boolean;
 }
 
 const Contact: React.FC<ContactProps> = ({
   text,
   src = "./photos/apply-to-zryw.jpg",
-  buttonText = "Aplikuj",
-  onButtonClick,
   className,
+  target
 }) => (
   <section className="w-full grid grid-cols-10">
     <div className="hidden xs:block xs:col-span-1" />
@@ -46,7 +44,7 @@ const Contact: React.FC<ContactProps> = ({
         </div>
         {/* Biała figura z buttonem */}
         <div className="flex absolute left-1/2 bottom-0 -translate-x-1/2 w-[161px] h-[106px] xs:w-[220px] xs:h-[152px] bg-[var(--color-background)] rounded-t-full shadow-md justify-center items-center z-10 xs:rounded-t-full xs:bottom-0 xs:left-1/2 xs:-translate-x-1/2">
-          <Button className="w-[96px] h-[45px] bg-accent hidden xs:block" link="/aplikuj">Aplikuj</Button>
+          <Button className="w-[96px] h-[45px] bg-accent hidden xs:block" link={target ? "https://wkf.ms/3T3ynat" : "/aplikuj"} blank={target ? true : false}>Aplikuj</Button>
         </div>
       </div>
     </div>

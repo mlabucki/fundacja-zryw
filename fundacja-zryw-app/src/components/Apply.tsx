@@ -10,9 +10,9 @@ const Apply: React.FC = () => {
     <div className="text-[var(--color-primary)]">
       <ApplyHero />
       <ApplyJoin />
-      <SoundsFamiliar />
+      <SoundsFamiliar buttonTarget={true}/>
       <Faq />
-      <ApplyContact />
+      <ApplyContact buttonTarget={true}/>
     </div>
   );
 };

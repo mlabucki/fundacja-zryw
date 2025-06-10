@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface AboutWhyProps {
   title: string;
   text: string;
   bgColor: string;
   textColor: string;
-  clipPath?: string;
   arrowColor?: string;
 }
 
@@ -14,24 +13,76 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
   text,
   bgColor,
   textColor,
-  clipPath,
-  arrowColor = "#222", // domyślnie czarny
+  arrowColor = "#222",
 }) => {
   const [open, setOpen] = useState(false);
+  const [renderContent, setRenderContent] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      setRenderContent(true);
+    } else {
+      const timer = setTimeout(() => setRenderContent(false), 600);
+      return () => clearTimeout(timer);
+    }
+  }, [open]);
 
   return (
     <div
-      className={`w-[609px] rounded-t-lg relative ${bgColor} cursor-pointer select-none transition-all duration-500 overflow-hidden`}
-      style={{ height: open ? 220 : 145 }}
+      className="w-full max-w-[609px] relative cursor-pointer select-none transition-all duration-500 overflow-hidden"
+      style={{ height: open ? "220px" : "145px" }}
       onClick={() => setOpen((prev) => !prev)}
     >
+      {/* Ukryte svg z responsywnym clipPath */}
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath id="clip" clipPathUnits="objectBoundingBox">
+            <path d="
+              M 0.02,0
+              L 0.67,0
+              A 0.02 0.07 0 0 1 0.69,0.06
+              L 0.69,0.06
+              A 0.02 0.084 0 0 0 0.79,0.06
+              L 0.79,0.06
+              A 0.02 0.07 0 0 1 0.81,0
+              L 0.98,0
+              A 0.02 0.07 0 0 1 1,0.06
+              L 1,0.94
+              A 0.02 0.07 0 0 1 0.98,1
+              L 0.02,1
+              A 0.02 0.07 0 0 1 0,0.94
+              L 0,0.06
+              A 0.02 0.07 0 0 1 0.02,0
+              Z
+            " />
+          </clipPath>
+        </defs>
+      </svg>
+
+      {/* Element z clip-path */}
       <div
-        className="absolute top-0 right-1/6 z-10 flex items-center justify-center bg-[var(--color-background)] rounded-full w-[35px] h-[33px] shadow"
-        style={{ ...(clipPath ? { clipPath } : {}), color: arrowColor }}
+        className={`flex items-center pl-[40px] w-full ${bgColor}`}
+        style={{
+          clipPath: "url(#clip)",
+          height: "145px",
+          transition: "height 0.5s",
+          color: textColor,
+        }}
+      >
+        <h3 className="font-calluna text-white text-[54px]">{title}</h3>
+      </div>
+
+      {/* Strzałka */}
+      <div
+        className="absolute top-0 right-[26%] z-10 flex items-center justify-center transition-transform duration-500 -translate-x-[-8.5px]"
+        style={{
+          color: arrowColor,
+          transform: open ? "rotate(-180deg)" : "rotate(0deg)",
+        }}
       >
         <svg
-          width="13"
-          height="24"
+          width="17"
+          height="33"
           viewBox="0 0 13 24"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,14 +93,17 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
           />
         </svg>
       </div>
-      <div className="flex items-center justify-center h-[145px] w-full">
-        <h3 className={`font-new-order font-bold text-[54px] ${textColor}`}>
-          {title}
-        </h3>
-      </div>
-      {open && (
-        <div className="w-full flex justify-center">
-          <p className={`font-calluna text-base text-center ${textColor}`}>
+
+      {/* Tekst pokazany po kliknięciu */}
+      {renderContent && (
+        <div
+          className={`w-full flex justify-center ${bgColor} mt-[-9px] px-3 pt-[4px] pb-2 rounded-b-lg transition-all duration-500 ease-in-out`}
+          style={{
+            maxHeight: open ? "300px" : "0px",
+            overflow: "hidden",
+          }}
+        >
+          <p className={`font-calluna text-white text-base text-center ${textColor}`}>
             {text}
           </p>
         </div>

@@ -2,7 +2,11 @@ import React from "react";
 import Button from "./Button";
 import Container from "./Container";
 
-const SoundsFamiliar: React.FC = () => (
+interface SoundsFamiliarTarget {
+  buttonTarget?: boolean;
+}
+
+const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({buttonTarget}) => (
   <Container>
     <div className="mt-33">
       <h2 className="font-new-order text-[41px] xs:text-[54px] text-green font-bold mb-8 text-center xs:text-left xs:mb-16">
@@ -35,7 +39,7 @@ const SoundsFamiliar: React.FC = () => (
             </p>
           ))}
         </div>
-        <Button className="w-[96px] h-[45px] mt-2 bg-[var(--color-accent)] text-white" link="/aplikuj">
+        <Button className="w-[96px] h-[45px] mt-2 bg-[var(--color-accent)] text-white" link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"} blank={buttonTarget ? true : false}>
           Aplikuj
         </Button>
       </div>
@@ -63,7 +67,7 @@ const SoundsFamiliar: React.FC = () => (
             </p>
           ))}
           <div>
-            <Button className="w-[96px] h-[45px] bg-[var(--color-accent)] text-white" link="/aplikuj">
+            <Button className="w-[96px] h-[45px] bg-[var(--color-accent)] text-white" link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"} blank={buttonTarget ? true : false}>
               Aplikuj
             </Button>
           </div>

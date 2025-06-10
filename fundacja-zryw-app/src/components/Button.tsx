@@ -6,14 +6,16 @@ interface ButtonProps {
   className?: string;
   style?: React.CSSProperties;
   link: string;
+  blank?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className = "", style, link }) => (
+const Button: React.FC<ButtonProps> = ({ children, className = "", style, link, blank }) => (
     <Link to={link}
       className={`rounded-full font-calluna text-base text-white shadow transition focus:outline-none flex justify-center items-center ${className}`}
       style={style}
+      target={blank ? '_blank' : '_parent'}
     >
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }}>
+      <div className="flex justify-center items-center w-full h-full z-2">
         {children}
       </div>
     </Link>

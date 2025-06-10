@@ -23,7 +23,13 @@ const LoadingHeader: React.FC = () => {
     <Container>
       <section className="relative xs:mt-8 overflow-hidden rounded-lg w-full">
         <div className="h-full relative w-full xs:h-[672px]">
-          <img src={picture} alt="zryw-main-picture" className="h-full w-full object-cover object-[40%_35%] rounded-lg" />
+          <img
+            src={picture}
+            alt="zryw-main-picture"
+            loading="eager"
+            fetchPriority="high"
+            className="h-full w-full object-cover object-[40%_35%] rounded-lg"
+          />
           <div className="absolute hidden xs:block z-2 inset-0 bg-[linear-gradient(285.13deg,_rgba(0,_0,_0,_0)_0.22%,_rgba(81,_81,_61,_0.2)_100%)] rounded-lg"></div>
         </div>
 

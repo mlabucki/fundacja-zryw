@@ -13,7 +13,7 @@ import building from "/photos/building.jpg";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <div>
       <LoadingHeader />
       <Container>
         <hr className="mt-20 h-[1px] bg-olive border-0 outline-none hidden xs:block" />
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
         </div>
         <div className="hidden xs:block xs:col-span-1" />
       </section>
-    </>
+    </div>
   );
 };
 

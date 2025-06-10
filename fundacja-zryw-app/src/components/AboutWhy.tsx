@@ -22,7 +22,7 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
     if (open) {
       setRenderContent(true);
     } else {
-      const timer = setTimeout(() => setRenderContent(false), 600);
+      const timer = setTimeout(() => setRenderContent(false), 340);
       return () => clearTimeout(timer);
     }
   }, [open]);

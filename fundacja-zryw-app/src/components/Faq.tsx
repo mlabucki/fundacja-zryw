@@ -54,7 +54,7 @@ const Faq: React.FC = () => {
         <div className="mt-4">
           <p className="hidden xs:block">
             Napisz do nas na{" "}
-            <span className="underline">rekrutacja@fundacjazryw.pl</span>
+            <a className="underline" href="mailto:rekrutacja@fundacjazryw.pl">rekrutacja@fundacjazryw.pl</a>
           </p>
           <p className="block xs:hidden">Napisz do Nas, z chęcią odpowiemy</p>
         </div>

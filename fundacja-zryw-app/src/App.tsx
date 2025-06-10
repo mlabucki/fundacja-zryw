@@ -19,7 +19,7 @@ const App: React.FC = () => {
           <Navigation />
         </div>
 
-        <main className="flex-grow">
+        <main className="flex-grow mt-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-nas" element={<About />} />

@@ -32,7 +32,11 @@ const Home: React.FC = () => {
       <section className="w-full grid grid-cols-10 mt-[120px]">
         <div className="hidden xs:block xs:col-span-1" />
         <div className="col-span-10 xs:col-span-8">
-          <Contact text={`Zrywamy ze\nschematami`} src={building} />
+          <Contact
+            text={`Zrywamy ze\nschematami`}
+            src={building}
+            className="text-[var(--color-beige)]"
+          />
         </div>
         <div className="hidden xs:block xs:col-span-1" />
       </section>

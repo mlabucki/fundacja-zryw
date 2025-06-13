@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import team from "/photos/team.jpg";
 import Button from "./Button";
-import arrowRight from '/vectors/arrowRight.svg';
+import arrowRight from "/vectors/arrowRight.svg";
 import Container from "./Container";
 
 interface DescriptionData {
@@ -11,24 +11,24 @@ interface DescriptionData {
 
 const descriptions: DescriptionData[] = [
   {
-    title: "Wiedzę z XXI wieku",
-    text: "Od edukatorów z Yale i Cambridge, po praktyków z pierwszej linii",
+    title: "Praktyczna wiedza",
+    text: "Dyskusje z edukatorami, od profesorów Yale i Cambridge, po praktyków z pierwszej linii.",
   },
   {
-    title: "Warsztat skutecznego działania",
-    text: "Komunikacja, organizowanie społeczne, tworzenie polityk publicznych",
+    title: "Warsztat działania",
+    text: "Komunikacja, organizowanie społeczne, tworzenie polityk publicznych.",
   },
   {
-    title: "Politykę od kuchni",
+    title: "Życie polityczne od kuchni",
     text: "Zamknięte spotkania z decydentami w formule Chatham House",
   },
   {
     title: "Sieć ludzi, którym też się chce",
-    text: "Relacje na lata z dziesiątkami osób z całej Polski",
+    text: "Relacje na lata z dziesiątkami osób z całej Polski.",
   },
   {
     title: "Mentoring i rozwój",
-    text: "Regularne wsparcie od tych, którzy już przeszli tę drogę",
+    text: "Regularne wsparcie od tych, którzy już przeszli tę drogę.",
   },
 ];
 
@@ -113,26 +113,49 @@ const Description: React.FC = () => {
         className="hide-scrollbar grid grid-flow-col md:grid-cols-3 xs:grid-cols-2 overflow-x-auto overflow-y-hidden xs:grid-flow-row xs:gap-x-40 xs:gap-y-36 mt-15 scroll-smooth"
       >
         {descriptions.map(({ title, text }, idx) => (
-          <div key={idx} className="flex flex-col w-[290px] xs:w-auto pr-10 xs:pr-0">
+          <div
+            key={idx}
+            className="flex flex-col w-[290px] xs:w-auto pr-10 xs:pr-0"
+          >
             <h3 className="font-new-order xs:text-2xl text-green">{title}</h3>
             <p className="font-calluna xs:text-lg mt-4 leading-[130%] tracking-[-0.015em]">
               {text}
             </p>
           </div>
         ))}
-        <Button className="w-[96px] h-[45px] bg-olive hidden xs:block" link="/aplikuj">Aplikuj</Button>
+        <div className="flex justify-center self-center">
+          <Button
+            className="w-[105px] h-[50px] bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-300 hidden xs:block"
+            link="/aplikuj"
+          >
+            Aplikuj
+          </Button>
+        </div>
       </section>
 
       <div className="mt-10 xs:hidden">
         <div className="ml-auto w-[100px] flex justify-between">
-          <button onClick={scrollLeft} disabled={currentIndex === 0} aria-label="Poprzedni">
+          <button
+            onClick={scrollLeft}
+            disabled={currentIndex === 0}
+            aria-label="Poprzedni"
+          >
             <img src={arrowRight} alt="left" />
           </button>
-          <button onClick={scrollRight} disabled={currentIndex === descriptions.length - 1} aria-label="Następny">
+          <button
+            onClick={scrollRight}
+            disabled={currentIndex === descriptions.length - 1}
+            aria-label="Następny"
+          >
             <img src={arrowRight} alt="right" className="rotate-180" />
           </button>
         </div>
-        <Button className="w-[96px] h-[45px] bg-olive ml-auto mt-6" link="/aplikuj">Aplikuj</Button>
+        <Button
+          className="w-[105px] h-[50px] bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-300 ml-auto mt-6"
+          link="/aplikuj"
+        >
+          Aplikuj
+        </Button>
       </div>
     </Container>
   );

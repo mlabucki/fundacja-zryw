@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import picture from '/photos/main-home.jpg';
-import arrowDown from '/vectors/arrowDown.svg';
-import arrowRounded from '/vectors/arrowRounded.svg';
+import picture from "/photos/main-home.jpg";
+import arrowDown from "/vectors/arrowDown.svg";
+import arrowRounded from "/vectors/arrowRounded.svg";
 import Container from "./Container";
 
 const LoadingHeader: React.FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isFirstText, setIsFirstText] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -17,7 +19,22 @@ const LoadingHeader: React.FC = () => {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  const clipPathValue = "path('M 10,0 L 328,0 A 10,10 0,0,1 338,10 L 338 177 A 10,10 0,0,1 328, 187 L 300,187 A 10,10 0,0,1 290,177 L 290,180 A 10,10 0,0,0 240,180 L 240,177 A 10,10 0,0,1 230,187 L 10,187 A 10,10 0,0,1 0,177 L 0,10 A 10,10 0,0,1 10,0 Z')";
+  useEffect(() => {
+    if (!isSmallScreen) return; // Only run animation on desktop
+
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setIsFirstText(!isFirstText);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isFirstText, isSmallScreen]);
+
+  const clipPathValue =
+    "path('M 10,0 L 328,0 A 10,10 0,0,1 338,10 L 338 177 A 10,10 0,0,1 328, 187 L 300,187 A 10,10 0,0,1 290,177 L 290,180 A 10,10 0,0,0 240,180 L 240,177 A 10,10 0,0,1 230,187 L 10,187 A 10,10 0,0,1 0,177 L 0,10 A 10,10 0,0,1 10,0 Z')";
 
   return (
     <Container>
@@ -34,18 +51,49 @@ const LoadingHeader: React.FC = () => {
         </div>
 
         <h1 className="z-3 xs:absolute xs:top-[6%] xs:left-[3%] text-green mt-6 xs:mt-0 xs:text-white text-[41px] xs:text-[clamp(4rem,6vw,6rem)] font-new-order leading-[0.95] tracking-[-0.03em] xs:capitalize">
-          Budujemy <br className="hidden md:block" /> nowe <br className="hidden md:block"/> kadry
+          {isSmallScreen ? (
+            <div
+              className={`transition-opacity duration-500 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {isFirstText ? (
+                <>
+                  Budujemy <br className="hidden md:block" />
+                  nowe <br className="hidden md:block" />
+                  kadry
+                </>
+              ) : (
+                <>
+                  Program <br className="hidden md:block" />
+                  Przywództwa <br className="hidden md:block" />
+                  Publicznego
+                </>
+              )}
+            </div>
+          ) : (
+            <>
+              Budujemy <br className="hidden md:block" />
+              nowe <br className="hidden md:block" />
+              kadry
+            </>
+          )}
         </h1>
 
         <div className="relative w-full md:w-[338px] md:h-[187px] md:absolute md:bottom-[6%] md:right-[3%]">
           <div
-            className="gap-y-6 md:gap-y-0 z-3 mt-6 w-full h-full md:mt-0 md:bg-white md:rounded-lg md:p-6 flex flex-col justify-between"
+            className="gap-y-6 md:gap-y-0 z-3 mt-6 w-full h-full md:mt-0 md:bg-[var(--color-beige)] md:rounded-lg md:p-6 flex flex-col justify-between"
             style={isSmallScreen ? { clipPath: clipPathValue } : undefined}
           >
-            <p className="text-lg font-calluna">Jesteśmy społecznością państwowców.</p>
-            <p className="text-lg font-calluna">Pomagamy młodym osobom wejść w służbę publiczną i życie polityczne.</p>
+            <p className="text-lg font-calluna">
+              Jesteśmy społecznością państwowców.
+            </p>
+            <p className="text-lg font-calluna">
+              Pomagamy młodym osobom wejść w służbę publiczną i życie
+              polityczne.
+            </p>
             <p className="text-lg font-calluna flex">
-              Zobacz Więcej
+              Zobacz wiecej
               <img src={arrowRounded} alt="" className="ml-2 md:hidden" />
             </p>
           </div>

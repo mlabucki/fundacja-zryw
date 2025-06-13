@@ -9,7 +9,8 @@ interface QuestionsData {
 
 const questions: QuestionsData[] = [
   {
-    title: "Czy mogę aplikować jeśli nie spełniam kryteria wiekowego 20-25 lat?",
+    title:
+      "Czy mogę aplikować jeśli nie spełniam kryteria wiekowego 20-25 lat?",
     text: "Przymujemy zgłoszenia tylko od osób pełnoletnich. Naszą główną grupą docelową są osoby w wieku pomiędzy 19 a 25 lat, jednak jeśli uważasz, że ten program jest dla Ciebie, nie zdyskwalifikujemy Cię jedynie ze względu na wiek.",
   },
   {
@@ -52,14 +53,21 @@ const Faq: React.FC = () => {
           Masz inne pytanie?
         </h3>
         <div className="mt-4">
-          <p className="hidden xs:block">
+          <p className="hidden xs:block font-calluna">
             Napisz do nas na{" "}
-            <a className="underline" href="mailto:rekrutacja@fundacjazryw.pl">rekrutacja@fundacjazryw.pl</a>
+            <a className="underline" href="mailto:aplikuj@fundacjazryw.pl">
+              aplikuj@fundacjazryw.pl
+            </a>
           </p>
           <p className="block xs:hidden">Napisz do Nas, z chęcią odpowiemy</p>
         </div>
 
-        <Button className="block xs:hidden mt-6 bg-green w-[103px] h-[48px]" link="/aplikuj">Kontakt</Button>
+        <Button
+          className="block xs:hidden mt-6 bg-green w-[103px] h-[48px]"
+          link="/aplikuj"
+        >
+          Kontakt
+        </Button>
       </section>
     </Container>
   );

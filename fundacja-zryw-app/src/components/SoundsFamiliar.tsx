@@ -6,13 +6,12 @@ interface SoundsFamiliarTarget {
   buttonTarget?: boolean;
 }
 
-const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({buttonTarget}) => (
+const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({ buttonTarget }) => (
   <Container>
     <div className="mt-33">
       <h2 className="font-new-order text-[41px] xs:text-[54px] text-green font-bold mb-8 text-center xs:text-left xs:mb-16">
-        Brzmi znajomo?
+        Czy to Ty?
       </h2>
-      {/* MOBILE + TABLET: do 970px */}
       <div className="flex flex-col items-center md:hidden">
         <div className="w-full max-w-xs rounded-lg overflow-hidden aspect-square mb-6">
           <img
@@ -23,13 +22,13 @@ const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({buttonTarget}) => (
         </div>
         <div className="flex flex-col items-center gap-4 w-full max-w-xs mb-4">
           {[
-            "Masz 19–25 lat i studiujesz na polskiej uczelni",
-            "Działasz lokalnie i wiesz, jak rozwiązywać realne problemy",
+            "Masz 19–25 lat i studiujesz na polskiej lub zagranicznej uczelni ",
+            "Zależy Ci na Twojej społeczności i chcesz rozwiązywać realne problemy",
             "Chcesz poznać osoby z pierwszej linii polskiego życia publicznego",
-            "Szukasz ekipy z całej Polski, która też chce czegoś więcej",
+            "Chcesz być częścią wspólnoty, która zmienia Polskę",
             "Frustruje Cię, jak wygląda dziś polskie życie publiczne i czujesz, że można inaczej",
             "Jesteś osobą empatyczną, zdeterminowaną i skuteczną",
-            "Zależy Ci na bliskim kontakcie z czołowymi liderami publicznymi",
+            "Masz misję i chcesz wspierać rozwój Polski",
           ].map((text, index) => (
             <p
               key={index}
@@ -39,7 +38,11 @@ const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({buttonTarget}) => (
             </p>
           ))}
         </div>
-        <Button className="w-[96px] h-[45px] mt-2 bg-[var(--color-accent)] text-white" link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"} blank={buttonTarget ? true : false}>
+        <Button
+          className="w-[96px] h-[45px] mt-2 bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-300"
+          link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"}
+          blank={buttonTarget ? true : false}
+        >
           Aplikuj
         </Button>
       </div>
@@ -54,20 +57,24 @@ const SoundsFamiliar: React.FC<SoundsFamiliarTarget> = ({buttonTarget}) => (
         </div>
         <div className="xs:col-span-8 grid grid-cols-1 xs:grid-cols-2 gap-6 xs:gap-x-16 xs:gap-y-8">
           {[
-            "Masz 19–25 lat i studiujesz na polskiej uczelni",
-            "Działasz lokalnie i wiesz, jak rozwiązywać realne problemy",
+            "Masz 19–25 lat i studiujesz na polskiej lub zagranicznej uczelni ",
+            "Zależy Ci na Twojej społeczności i chcesz rozwiązywać realne problemy",
             "Chcesz poznać osoby z pierwszej linii polskiego życia publicznego",
-            "Szukasz ekipy z całej Polski, która też chce czegoś więcej",
+            "Chcesz być częścią wspólnoty, która zmienia Polskę",
             "Frustruje Cię, jak wygląda dziś polskie życie publiczne i czujesz, że można inaczej",
             "Jesteś osobą empatyczną, zdeterminowaną i skuteczną",
-            "Zależy Ci na bliskim kontakcie z czołowymi liderami publicznymi",
+            "Masz misję i chcesz wspierać rozwój Polski",
           ].map((text, index) => (
             <p key={index} className="font-calluna text-xl">
               {text}
             </p>
           ))}
-          <div>
-            <Button className="w-[96px] h-[45px] bg-[var(--color-accent)] text-white" link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"} blank={buttonTarget ? true : false}>
+          <div className="flex justify-center">
+            <Button
+              className="w-[105px] h-[50px] bg-[var(--color-primary)] text-white hover:bg-[var(--color-accent)] hover:text-white transition-colors duration-300"
+              link={buttonTarget ? "https://wkf.ms/3T3ynat" : "/aplikuj"}
+              blank={buttonTarget ? true : false}
+            >
               Aplikuj
             </Button>
           </div>

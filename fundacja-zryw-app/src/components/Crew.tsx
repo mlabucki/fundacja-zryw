@@ -1,9 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
 import people from "../assets/people.json";
 import Container from "./Container";
-import twitter from "/vectors/twitter.png";
 import linkedin from "/vectors/linkedin.png";
-import arrowRight from '/vectors/arrowRight.svg';
+import arrowRight from "/vectors/arrowRight.svg";
 
 const tileWidth = 312;
 
@@ -89,18 +88,21 @@ const Crew: React.FC = () => {
                 {person.name}
               </p>
               {person.title && (
-                <p className="font-calluna text-base text-brown">{person.title}</p>
+                <p className="font-calluna text-base text-brown">
+                  {person.title}
+                </p>
               )}
             </div>
             <p className="font-calluna text-base text-brown leading-[150%]">
               {person.description}
             </p>
             <div className="flex gap-x-4">
-              <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+              <a
+                href={person.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={linkedin} alt="linkedin-logo" />
-              </a>
-              <a href={person.twitter} target="_blank" rel="noopener noreferrer">
-                <img src={twitter} alt="twitter-logo" />
               </a>
             </div>
           </div>

@@ -15,14 +15,14 @@ const AboutSection1: React.FC = () => {
         <AboutInfo
           color="text-[var(--color-accent)]"
           title="zryw"
-          text="wychodzi poza technokratyczne przygotowanie do służby, kształtuje liderów zdolnych do samodzielnego myślenia i konstruktywnej współpracy. Wyposażamy młodych w wiedzę, doświadczenie i relacje niezbędne do zaangażowania się w życie publiczne."
+          text="wychodzi poza technokratyczne przygotowanie do służby, kształtuje przywódców zdolnych do samodzielnego myślenia i konstruktywnej współpracy. Wzmacniając ludzi z misją, wspieramy rozwój Polski."
         />
       </div>
       <div className="flex-1 mt-30 lg:mt-[330px]">
         <AboutInfo
           color="text-[var(--color-olive)]"
           title="zryw"
-          text="to przestrzeń pierwszych kroków w życiu publicznym—dla młodych patriotów i państwowców, którzy chcą kształtować społeczeństwo w rytm wartości obywatelskich."
+          text="wyposaża w wiedzę, doświadczenie i relacje. Nie musisz znać wszystkich odpowiedzi. Jeśli zadasz właściwe pytanie, pomożemy Ci je znaleźć."
         />
       </div>
     </section>

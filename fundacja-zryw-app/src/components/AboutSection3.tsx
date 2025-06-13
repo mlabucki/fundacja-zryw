@@ -7,7 +7,7 @@ const AboutSection3: React.FC = () => {
       <div>
         <AboutWhy
           title="Dlaczego"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
+          text="Wiele wymagamy od naszych przywódców i często czujemy się zawiedzeni ich postawami. Jednak czy szkolimy, pomagamy i troszczymy się o osoby, które chcemy, aby nam przewodziły? Jeśli tego nie robimy, to dlaczego oczekujemy, że będą dobrze wykonywać powierzone im zadania?"
           bgColor="bg-[var(--color-primary)]"
           textColor="text-[var(--color-beige)]"
           arrowColor="var(--color-primary)"
@@ -16,7 +16,7 @@ const AboutSection3: React.FC = () => {
       <div className="mt-[80px] flex justify-center">
         <AboutWhy
           title="Jak"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
+          text="Zmiana zaczyna się od wewnętrznego zrywu: decyzji, że warto wziąć odpowiedzialność. Wierzymy, że jakościowa zmiana pokoleniowa w polskim życiu publicznym jest możliwa od środka. Jeden zryw nie zmieni systemu. Ale cała fala już tak. "
           bgColor="bg-[var(--color-accent)]"
           textColor="text-[var(--color-beige)]"
           arrowColor="var(--color-accent)"
@@ -25,7 +25,7 @@ const AboutSection3: React.FC = () => {
       <div className="mt-[80px] w-full flex justify-end">
         <AboutWhy
           title="Co"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque."
+          text="Otaczamy wsparciem osoby, które już na wczesnym etapie wykazują wysoki potencjał przywódczy i silne prospołeczne motywacje. Organizujemy zrywy: kilkudniowe zjazdy w różnych zakątkach Polski, w trakcie których łączymy uczestników, praktyków i decydentów."
           bgColor="bg-[var(--color-olive)]"
           textColor="text-[var(--color-primary)]"
           arrowColor="var(--color-olive)"

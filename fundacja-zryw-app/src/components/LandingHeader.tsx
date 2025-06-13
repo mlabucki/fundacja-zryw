@@ -86,7 +86,8 @@ const LoadingHeader: React.FC = () => {
             style={isSmallScreen ? { clipPath: clipPathValue } : undefined}
           >
             <p className="text-lg font-calluna">
-              Jesteśmy społecznością państwowców.
+              Widzimy pokolenie w zrywie. Nie czekające, lecz obejmujące
+              przestrzenie, które kiedyś wydawały się zamknięte.
             </p>
             <p className="text-lg font-calluna">
               Pomagamy młodym osobom wejść w służbę publiczną i życie

@@ -3,15 +3,7 @@
         "img": "/faces/agnieszkag.png",
         "name": "Agnieszka Gryz",
         "title": "Prezeska",
-        "description": "Doradczyni kampanijna. Wcześniej agencja prasowa Reuters i ONZ w Ankarze. Absolwentka szwedzkiego Uniwersytetu w Lund.",
-        "linkedin": "https://www.linkedin.com",
-        "twitter": "https://x.com"
-    },
-    {
-        "img": "/faces/alicjak.png",
-        "name": "Alicja Kępka",
-        "title": "Wiceprezeska",
-        "description": "Doradczyni polityczna i ekspertka ds. międzynarodowych i migracji w MSWiA. Absolwentka Kolegium Europejskiego w Natolinie i Uniwersytetu Amsterdamskiego.",
+        "description": "Doradczyni polityczna w wyborach europejskich, samorządowych, parlamentarnych. Wcześniej agencja prasowa Reuters i ONZ w Ankarze. Absolwentka szwedzkiego Uniwersytetu w Lund.",
         "linkedin": "https://www.linkedin.com",
         "twitter": "https://x.com"
     },
@@ -20,6 +12,14 @@
         "name": "Julia Wojciechowska",
         "title": "Wiceprezeska",
         "description": "Poprzednio The Royal Society of Arts w Londynie. Absolwentka polityki innowacji na Kolegium Uniwersyteckim w Londynie (UCL).",
+        "linkedin": "https://www.linkedin.com",
+        "twitter": "https://x.com"
+    },
+    {
+        "img": "/faces/alicjak.png",
+        "name": "Alicja Kępka",
+        "title": "Wiceprezeska",
+        "description": "Doradczyni polityczna i ekspertka ds. międzynarodowych i migracji w MSWiA. Absolwentka Kolegium Europejskiego w Natolinie i Uniwersytetu Amsterdamskiego.",
         "linkedin": "https://www.linkedin.com",
         "twitter": "https://x.com"
     },

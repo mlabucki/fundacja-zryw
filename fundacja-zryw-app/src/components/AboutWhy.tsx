@@ -29,15 +29,16 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
 
   return (
     <div
-      className="w-full max-w-[609px] relative cursor-pointer select-none transition-all duration-500 overflow-hidden"
-      style={{ height: open ? "220px" : "145px" }}
+      className="w-full max-w-[609px] relative cursor-pointer select-none transition-all duration-500"
+      style={{ height: open ? "auto" : "145px" }}
       onClick={() => setOpen((prev) => !prev)}
     >
       {/* Ukryte svg z responsywnym clipPath */}
       <svg width="0" height="0" style={{ position: "absolute" }}>
         <defs>
           <clipPath id="clip" clipPathUnits="objectBoundingBox">
-            <path d="
+            <path
+              d="
               M 0.02,0
               L 0.67,0
               A 0.02 0.07 0 0 1 0.69,0.06
@@ -54,7 +55,8 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
               L 0,0.06
               A 0.02 0.07 0 0 1 0.02,0
               Z
-            " />
+            "
+            />
           </clipPath>
         </defs>
       </svg>
@@ -98,12 +100,10 @@ const AboutWhy: React.FC<AboutWhyProps> = ({
       {renderContent && (
         <div
           className={`w-full flex justify-center ${bgColor} mt-[-9px] px-3 pt-[4px] pb-2 rounded-b-lg transition-all duration-500 ease-in-out`}
-          style={{
-            maxHeight: open ? "300px" : "0px",
-            overflow: "hidden",
-          }}
         >
-          <p className={`font-calluna text-white text-base text-center ${textColor}`}>
+          <p
+            className={`font-calluna text-white text-base text-center ${textColor} py-4`}
+          >
             {text}
           </p>
         </div>

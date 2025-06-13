@@ -37,7 +37,10 @@ const ApplyHero: React.FC = () => {
             <br />
             nową Polskę
           </h1>
-          <Button className="mx-auto block mb-6 bg-[var(--color-accent)] text-white w-[96px] h-[39px]" link="https://wkf.ms/3T3ynat">
+          <Button
+            className="mx-auto block mb-6 bg-[var(--color-accent)] text-white w-[140px] h-[52px]"
+            link="https://wkf.ms/3T3ynat"
+          >
             Aplikuj
           </Button>
         </div>
@@ -91,7 +94,7 @@ const ApplyHero: React.FC = () => {
                   </HeroText>
                   <Button
                     style={{ backgroundColor: "var(--color-beige)" }}
-                    className="!text-[var(--color-primary)] text-base self-center w-[96px] h-[39px] ml-auto"
+                    className="!text-[var(--color-primary)] text-base self-center w-[140px] h-[52px] ml-auto"
                     link="https://wkf.ms/3T3ynat"
                     blank={true}
                   >
